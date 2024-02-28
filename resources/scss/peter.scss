@@ -1,0 +1,62 @@
+.interface-preferences__tabs .components-tab-panel__tabs,
+.preferences__tabs-tablist {
+    left: 16px;
+    position: absolute;
+    top: 84px;
+    width: 160px;
+}
+
+.interface-preferences__tabs .components-tab-panel__tab-content,
+.preferences__tabs-tabpanel {
+    margin-left: 160px;
+    padding-left: 24px;
+}
+
+ul {
+    list-style: none;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.interface-preferences-modal__section,
+.preferences-modal__section {
+    margin: 0 0 2.5rem;
+}
+
+.interface-preferences-modal__option+.interface-preferences-modal__option,
+.components-base-control {
+    margin-top: 16px;
+}
+
+.editor-block-manager__category-title,
+.edit-post-block-manager__category-title {
+    background-color: #fff;
+    padding: 16px 0;
+    position: sticky;
+    top: -4px;
+    z-index: 1;
+}
+
+
+.editor-block-manager__category-title, .editor-block-manager__checklist-item,
+.edit-post-block-manager__category-title, .edit-post-block-manager__checklist-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.editor-block-manager__checklist-item,
+.edit-post-block-manager__checklist-item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 8px 0 8px 16px;
+}
+
+.editor-block-manager__checklist,
+.edit-post-block-manager__checklist {
+    margin-top: 0;
+}

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { editorSettings } from '../gutenberg/settings'
 import * as Notices from '../lib/notices'
 
-let routePrefix
+let routePrefix = "laraberg";
 let searchCb
 
 /**
@@ -68,7 +68,7 @@ const requests = {
     regex: /\/wp\/v2\/pages\/(\d*)($|[?].*)/g,
     run: getPage
   },
-  getPage: {
+  postPage: {
     method: 'POST',
     regex: /\/wp\/v2\/pages\/(\d*)($|[?].*)/g,
     run: PostPage
@@ -145,6 +145,44 @@ const requests = {
     method: "GET",
     regex: /\/wp\/v2\/posts\?context=edit(.*)/g,
     run: GetPost
+  },
+
+  optionTemplate: {
+	method: 'OPTIONS',
+    regex: /\/wp\/v2\/templates/g,
+    run: optionsTemplates
+  },
+
+  optionSettings: {
+	method: 'OPTIONS',
+    regex: /\/wp\/v2\/settings/g,
+    run: optionSettings
+  },
+
+  getSettings: {
+	method: 'GET',
+    regex: /\/wp\/v2\/settings/g,
+    run: getSettings
+  },
+
+
+  optionPages: {
+	method: 'OPTIONS',
+    regex: /\/wp\/v2\/pages/g,
+    run: optionPages
+  },
+
+
+  getTaxonomiesPostTag: {
+	method: 'GET',
+    regex: /\/wp\/v2\/taxonomies\/post_tag/g,
+    run: getTaxonomiesPostTag
+  },
+
+  getTaxonomiesCategory: {
+	method: 'GET',
+    regex: /\/wp\/v2\/taxonomies\/category/g,
+    run: getTaxonomiesCategory
   }
 
 
@@ -155,13 +193,73 @@ const requests = {
  
 }
 
-async function GetPost(options, matches) {
-  return MockData.post;
+
+async function getTaxonomiesCategory() {
+	return MockData.taxonomiesCategory;
+}
+
+async function getTaxonomiesPostTag() {
+	return MockData.taxonomiesPostTag;
 }
 
 
-async function PostPage() {
-  return false;
+async function getSettings() {
+	// TODO:: AJAX CALL
+	//const response = await axios.get(`/${routePrefix}/settings/`);
+	//return response.data;
+	return MockData.settings;
+}
+
+async function optionPages() {
+	return {
+		headers: {
+			get: value => {
+				if (value === 'allow') {
+					return ['GET', 'POST']
+				}
+			}
+		}
+	}
+}
+
+
+async function optionSettings() {
+	return {
+		headers: {
+			get: value => {
+				if (value === 'allow') {
+					return ['GET', 'POST', 'PUT', 'PATCH']
+				}
+			}
+		}
+	}
+}
+
+
+async function optionsTemplates() {
+	return {
+		headers: {
+			get: value => {
+				if (value === 'allow') {
+					return ['GET', 'POST']
+				}
+			}
+		}
+	}
+}
+
+async function GetPost(options, matches) {
+	console.log(options);
+	//const response = await axios.get(`${routePrefix}/getPost/${id}`)
+	return MockData.post;
+}
+
+
+async function PostPage(options, matches) {
+	// TODO::Make AJAX
+	//const response = await axios.post(`${routePrefix}/postPage`, matches)
+	//return response.data
+	return false;
 }
 
 async function fields() {
@@ -173,13 +271,14 @@ async function usersView() {
 }
 
 async function blockPatterns() {
-  return MockData.blockPatterns;
+	const response = await axios.get(`/${routePrefix}/block-patterns/patterns/`);
+	return response.data;
 }
 
 
 async function blockPatternsCategories() {
-  return MockData.blockPatternsCategories;
-
+	const response = await axios.get(`/${routePrefix}/block-patterns/categories/`);
+	return response.data;
 }
 
 
@@ -216,9 +315,9 @@ async function getBlock (options, matches) {
  * Get all reusable blocks
  */
 async function getBlocks () {
-  return [];
-  //const response = await axios.get(`${routePrefix}/blocks`)
-  //return response.data
+  //return [];
+  const response = await axios.get(`${routePrefix}/blocks`)
+  return response.data
 }
 
 /**
@@ -303,16 +402,16 @@ async function optionsMedia () {
  * Get page from mockdata and target value
  */
 async function getPage () {
-  const content = document.getElementById(editorSettings.target).value || ''
-  const date = (new Date()).toISOString()
-  return {
-    ...MockData.page,
-    date: date,
-    date_gtm: date,
-    content: {
-      raw: content
-    }
-  }
+	const content = '';
+	const date = (new Date()).toISOString()
+	return {
+    	...MockData.page,
+    	date: date,
+    	date_gtm: date,
+    	content: {
+      		raw: content
+    	}
+  	}
 }
 
 /**
@@ -380,6 +479,8 @@ async function getTaxonomies (options, matches) {
  * Mock themes request
  */
 async function getThemes () {
+	const response = await axios.get(`/${routePrefix}/themes/`)
+  	return response.data
   return MockData.themes
 }
 
@@ -426,46 +527,49 @@ function getUsers () {
  * @returns {Promsie} - promise containing results
  */
 function matchPath (options) {
-  console.log(options);
-  let promise
-  Object.keys(requests).forEach((key) => {
-    const request = requests[key]
-    // Reset lastIndex so regex starts matching from the first character
-    request.regex.lastIndex = 0
-    const matches = request.regex.exec(options.path)
+	if (!options.path) {
+		return new Promise(resolve => resolve('No action required.'));
+	}
 
-    const method = options.headers && options.headers['X-HTTP-Method-Override']
-                ? options.headers['X-HTTP-Method-Override']
-                : options.method || 'GET'
-   
+	let promise;
 
-    if (options.headers && options.headers['X-HTTP-Method-Override']) options.method = options.headers['X-HTTP-Method-Override']
-    
-    if ((options.method === request.method || (!options.method && request.method === 'GET')) && matches && matches.length > 0) {
-      console.log(matches);
-      promise = request.run(options, matches)
-    }
-  })
+	for (const key in requests) {
+		
+		if (requests.hasOwnProperty(key)) {
+			const requestPath = requests[key];
+        	requestPath.regex.lastIndex = 0;
+        	const matches = requestPath.regex.exec(`${options.path}`);
 
-  if (!promise) {
-    promise = new Promise((resolve, reject) => {
-      return reject(new FetchError({
-        code: 'api_handler_not_found',
-        message: 'API handler not found.',
-        data: {
-          path: options.path,
-          options: options,
-          status: 404
-        }
-      }))
-    })
-  }
-  console.log(promise);
-  return promise
+			if (
+				matches &&
+				matches.length > 0 &&
+				((options.method && options.method === requestPath.method) ||
+				  requestPath.method === 'GET')
+			  ) {
+				promise = requestPath.run(matches, options.data, options.body);
+			  }
+		}
+	}
+
+	if (!promise) {
+		promise = new Promise((resolve, reject) => {
+			return reject(new FetchError({
+				code: 'api_handler_not_found',
+				message: 'API handler not found.',
+				data: {
+					path: options.path,
+					options: options,
+					status: 404
+				}
+			}))
+		})
+	}
+	return promise
 }
 
 export default function apiFetch (options) {
-  const result = matchPath(options)
+  const result = matchPath(options);
+  
   return result.then(res => {
     return res
   }).catch(error => {

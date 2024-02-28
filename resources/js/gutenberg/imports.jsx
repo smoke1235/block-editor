@@ -40,6 +40,7 @@ import * as priorityQueue from '@wordpress/priority-queue'
 import * as serverSideRender from '@wordpress/server-side-render'
 import * as dataControls from '@wordpress/data-controls'
 import * as mediaUtils from '@wordpress/media-utils'
+import * as preferences from '@wordpress/preferences';
 
 export const imports = {
   a11y,
@@ -75,6 +76,7 @@ export const imports = {
   mediaUtils,
   notices,
   plugins,
+  preferences,
   priorityQueue,
   reduxRoutine,
   richText,

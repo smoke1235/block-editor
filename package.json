@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "A standalone implementation of the WordPress Block Editor",
   "main": "resources/laraberg.jsx",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cross-env NODE_ENV=production webpack --progress --config webpack.config.js",
-    "start": "vite playground"
+    "start": "vite playground",
+    "dev": "vite"
   },
   "repository": {
     "type": "git",
@@ -89,6 +89,8 @@
     "@wordpress/media-utils": "^4.43.0",
     "@wordpress/notices": "^4.20.0",
     "@wordpress/plugins": "^6.20.0",
+    "@wordpress/preferences": "^3.29.0",
+    "@wordpress/preferences-persistence": "^1.44.0",
     "@wordpress/priority-queue": "^2.52.0",
     "@wordpress/redux-routine": "^4.52.0",
     "@wordpress/rich-text": "^6.29.0",

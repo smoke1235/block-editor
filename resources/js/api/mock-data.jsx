@@ -17,27 +17,30 @@ export const page = {
     rendered: ''
   },
   title: {
-    raw: 'Preview page',
-    rendered: 'Preview page'
+    raw: "Auto Draft",
+    rendered: "Auto Draft",
   },
   excerpt: {
     raw: '',
     rendered: ''
   },
-  status: 'pending',
+  status: "auto-draft",
   revisions: { count: 0, last_id: 0 },
   parent: 0,
   theme_style: true,
   type: 'page',
-  link: `${window.location.origin}/preview`,
+  link: `${window.location.origin}/?page_id=1`,
   categories: [],
   featured_media: 0,
-  permalink_template: `${window.location.origin}/preview`,
+  permalink_template: `${window.location.origin}/%pagename%/`,
   preview_link: `${window.location.origin}/preview`,
   _links: {
     'wp:action-assign-categories': [],
     'wp:action-create-categories': []
   },
+  password: "",
+  slug: "",
+  author: 1,
   // functions
   setContent: (content) => {
     page.content = {
@@ -109,23 +112,23 @@ export const types = {
 }
 
 export const user = {
-  id: 1,
-  name: 'Laraberg',
-  url: '',
-  description: '',
-  link: 'https://demo.wp-api.org/author/laraberg/',
-  slug: 'laraberg',
-  avatar_urls: {
-    24: 'http://2.gravatar.com/avatar/83888eb8aea456e4322577f96b4dbaab?s=24&d=mm&r=g',
-    48: 'http://2.gravatar.com/avatar/83888eb8aea456e4322577f96b4dbaab?s=48&d=mm&r=g',
-    96: 'http://2.gravatar.com/avatar/83888eb8aea456e4322577f96b4dbaab?s=96&d=mm&r=g'
-  },
-  meta: [],
-  _links: {
-    self: [],
-    collection: []
-  }
-}
+    id: 1,
+    name: 'Human Made',
+    url: '',
+    description: '',
+    link: 'https://demo.wp-api.org/author/humanmade/',
+    slug: 'humanmade',
+    avatar_urls: {
+      24: 'http://2.gravatar.com/avatar/83888eb8aea456e4322577f96b4dbaab?s=24&d=mm&r=g',
+      48: 'http://2.gravatar.com/avatar/83888eb8aea456e4322577f96b4dbaab?s=48&d=mm&r=g',
+      96: 'http://2.gravatar.com/avatar/83888eb8aea456e4322577f96b4dbaab?s=96&d=mm&r=g',
+    },
+    meta: [],
+    _links: {
+      self: [],
+      collection: [],
+    },
+  };
 
 
 export const blockPatternsCategories = [
@@ -2112,3 +2115,143 @@ export const post = [
       }
   }
 ]
+
+
+export const settings = {
+    "title": "",
+    "description": "",
+    "timezone": "",
+    "date_format": "F j, Y",
+    "time_format": "g:i a",
+    "start_of_week": 1,
+    "language": "en_US",
+    "use_smilies": true,
+    "default_category": 1,
+    "default_post_format": "0",
+    "posts_per_page": 10,
+    "show_on_front": "posts",
+    "page_on_front": 0,
+    "page_for_posts": 0,
+    "default_ping_status": "open",
+    "default_comment_status": "open",
+    "site_logo": null,
+    "site_icon": 0
+}
+
+export const taxonomiesPostTag = {
+    "name": "Tags",
+    "slug": "post_tag",
+    "capabilities": {
+        "manage_terms": "manage_post_tags",
+        "edit_terms": "edit_post_tags",
+        "delete_terms": "delete_post_tags",
+        "assign_terms": "assign_post_tags"
+    },
+    "description": "",
+    "labels": {
+        "name": "Tags",
+        "singular_name": "Tag",
+        "search_items": "Search Tags",
+        "popular_items": "Popular Tags",
+        "all_items": "All Tags",
+        "parent_item": null,
+        "parent_item_colon": null,
+        "name_field_description": "The name is how it appears on your site.",
+        "slug_field_description": "The &#8220;slug&#8221; is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.",
+        "parent_field_description": null,
+        "desc_field_description": "The description is not prominent by default; however, some themes may show it.",
+        "edit_item": "Edit Tag",
+        "view_item": "View Tag",
+        "update_item": "Update Tag",
+        "add_new_item": "Add New Tag",
+        "new_item_name": "New Tag Name",
+        "separate_items_with_commas": "Separate tags with commas",
+        "add_or_remove_items": "Add or remove tags",
+        "choose_from_most_used": "Choose from the most used tags",
+        "not_found": "No tags found.",
+        "no_terms": "No tags",
+        "filter_by_item": null,
+        "items_list_navigation": "Tags list navigation",
+        "items_list": "Tags list",
+        "most_used": "Most Used",
+        "back_to_items": "&larr; Go to Tags",
+        "item_link": "Tag Link",
+        "item_link_description": "A link to a tag.",
+        "menu_name": "Tags",
+        "name_admin_bar": "post_tag"
+    },
+    "types": [
+        "post"
+    ],
+    "show_cloud": true,
+    "hierarchical": false,
+    "rest_base": "tags",
+    "rest_namespace": "wp\/v2",
+    "visibility": {
+        "public": true,
+        "publicly_queryable": true,
+        "show_admin_column": true,
+        "show_in_nav_menus": true,
+        "show_in_quick_edit": true,
+        "show_ui": true
+    }
+}
+
+export const taxonomiesCategory ={
+    "name": "Categories",
+    "slug": "category",
+    "capabilities": {
+        "manage_terms": "manage_categories",
+        "edit_terms": "edit_categories",
+        "delete_terms": "delete_categories",
+        "assign_terms": "assign_categories"
+    },
+    "description": "",
+    "labels": {
+        "name": "Categories",
+        "singular_name": "Category",
+        "search_items": "Search Categories",
+        "popular_items": null,
+        "all_items": "All Categories",
+        "parent_item": "Parent Category",
+        "parent_item_colon": "Parent Category:",
+        "name_field_description": "The name is how it appears on your site.",
+        "slug_field_description": "The &#8220;slug&#8221; is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.",
+        "parent_field_description": "Assign a parent term to create a hierarchy. The term Jazz, for example, would be the parent of Bebop and Big Band.",
+        "desc_field_description": "The description is not prominent by default; however, some themes may show it.",
+        "edit_item": "Edit Category",
+        "view_item": "View Category",
+        "update_item": "Update Category",
+        "add_new_item": "Add New Category",
+        "new_item_name": "New Category Name",
+        "separate_items_with_commas": null,
+        "add_or_remove_items": null,
+        "choose_from_most_used": null,
+        "not_found": "No categories found.",
+        "no_terms": "No categories",
+        "filter_by_item": "Filter by category",
+        "items_list_navigation": "Categories list navigation",
+        "items_list": "Categories list",
+        "most_used": "Most Used",
+        "back_to_items": "&larr; Go to Categories",
+        "item_link": "Category Link",
+        "item_link_description": "A link to a category.",
+        "menu_name": "Categories",
+        "name_admin_bar": "category"
+    },
+    "types": [
+        "post"
+    ],
+    "show_cloud": true,
+    "hierarchical": true,
+    "rest_base": "categories",
+    "rest_namespace": "wp\/v2",
+    "visibility": {
+        "public": true,
+        "publicly_queryable": true,
+        "show_admin_column": true,
+        "show_in_nav_menus": true,
+        "show_in_quick_edit": true,
+        "show_ui": true
+    }
+}

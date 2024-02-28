@@ -19,6 +19,9 @@
     outline: 0;
 }
 
+
+
+
   .components-panel__header.interface-complementary-area-header__small{
     background:#fff;
     padding-right:4px;
@@ -1301,5 +1304,24 @@
     .is-sidebar-opened .interface-interface-skeleton__sidebar{
       border-left:1px solid #e0e0e0;
       overflow:hidden scroll;
+    }
+  }
+
+
+  .edit-post-header {
+    .edit-post-fullscreen-mode-close {
+      // background-color: #0678be;
+      display: none;
+  
+      &.drupal {
+        .is-fullscreen-mode & {
+          display: flex;
+        }
+      }
+  
+      // svg {
+      //   width: 48px;
+      //   height: 48px
+      // }
     }
   }

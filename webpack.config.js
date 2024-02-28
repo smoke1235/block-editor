@@ -11,21 +11,16 @@ module.exports = {
   mode: process.env.NODE_ENV,
   entry: './resources/js/laraberg.jsx',
   output: {
-    //filename: 'laraberg.js',
-    filename: '[name].bundle.js',
+    filename: 'laraberg.js',
     path: path.resolve(__dirname, 'public/js')
   },
   
   devtool: 'source-map',
   externals: externals,
   resolve: {
-    extensions: [".jsx", ".js"],
+    extensions: [".jsx", ".js", ".scss", ".css"],
 },
-optimization: {
-  splitChunks: {
-    chunks: 'all',
-  },
-},
+
   module: {
     rules: [
       {
