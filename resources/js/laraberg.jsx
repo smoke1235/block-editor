@@ -34,14 +34,14 @@ async function init(target, type , pageID, settings) {
     const editorSettings = getEditorSettings(settings);
 
     const element = document.getElementById(target);
-    const mySelector = `editor-${element.dataset.drupalSelector}`;
+    const mySelector = `editor`;
     const editor = document.createElement('DIV')
     editor.id = mySelector;
-    editor.classList.add('gutenberg__editor');
+    editor.classList.add('block-editor__container', 'hide-if-no-js');
     element.parentNode.insertBefore(editor, element)
     element.hidden = true;
     
-    data.subscribe(() => {
+    /*data.subscribe(() => {
         // We need to deal with the top left logo when in fullscreen mode.
         const isFullscreenMode = data
           .select('core/edit-post')
@@ -120,11 +120,11 @@ async function init(target, type , pageID, settings) {
           // see https://github.com/WordPress/gutenberg/issues/11681
           data.dispatch('core/block-editor').setTemplateValidity(true);
         }
-      });
+      });*/
 
       // To avoid restore backup notices from local autosave.
-      sessionStorage.removeItem('wp-autosave-block-editor-post-auto-draft');
-      localStorage.removeItem('wp-autosave-block-editor-post-1');
+      //sessionStorage.removeItem('wp-autosave-block-editor-post-auto-draft');
+      //localStorage.removeItem('wp-autosave-block-editor-post-1');
 
 
     await editPost.initializeEditor(mySelector, type, pageID, editorSettings, {"title":"","content":""});

@@ -6,15 +6,27 @@ import {Laraberg as BlockEditor} from "../resources/js/laraberg"
 
 
 var styles = [
-    "<link rel='stylesheet' id='wp-components-css' href='https:/wp.smokenetwork.nl/wp-includes/css/dist/components/style.min.css?ver=6.4.3' media='all' />",
-    "<link rel='stylesheet' id='wp-block-editor-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/block-editor/style.min.css?ver=6.4.3' media='all' />",
-    "<link rel='stylesheet' id='wp-reusable-blocks-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/reusable-blocks/style.min.css?ver=6.4.3' media='all' />",
-    "<link rel='stylesheet' id='wp-patterns-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/patterns/style.min.css?ver=6.4.3' media='all' />",
-    "<link rel='stylesheet' id='wp-editor-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/editor/style.min.css?ver=6.4.3' media='all' />",
-    "<link rel='stylesheet' id='wp-block-library-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/block-library/style.min.css?ver=6.4.3' media='all' />",
-    "<link rel='stylesheet' id='wp-block-editor-content-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/block-editor/content.min.css?ver=6.4.3' media='all' />",
-    "<link rel='stylesheet' id='wp-edit-blocks-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/block-library/editor.min.css?ver=6.4.3' media='all' />",
+    "<link rel='stylesheet' id='dashicons-css' href='https://wp.smokenetwork.nl/wp-includes/css/dashicons.min.css?ver=6.4.3' media='all' />",
+    "<link rel='stylesheet' id='wp-components-css' href='https://wp.smokenetwork.nl/wp-content/plugins/gutenberg/build/components/style.css?ver=17.8.0' media='all' />",
+    "<link rel='stylesheet' id='wp-block-library-css' href='https://wp.smokenetwork.nl/wp-content/plugins/gutenberg/build/block-library/style.css?ver=17.8.0' media='all' />",
+    '<style>.is-style-arrow-icon-details{padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)}.is-style-pill a,.is-style-pill span:not([class],[data-rich-text-placeholder]){display:inline-block;background-color:var(--wp--preset--color--base-2);padding:.375rem .875rem;border-radius:var(--wp--preset--spacing--20)}.is-style-pill a:hover{background-color:var(--wp--preset--color--contrast-3)}ul.is-style-checkmark-list li{padding-inline-start:1ch}.is-style-arrow-link .wp-block-navigation-item__label:after{padding-inline-start:0.25rem;vertical-align:middle;text-decoration:none;display:inline-block}.is-style-asterisk:before{content:"";width:1.5rem;height:3rem;background:var(--wp--preset--color--contrast-2,currentColor);clip-path:path("M11.93.684v8.039l5.633-5.633 1.216 1.23-5.66 5.66h8.04v1.737H13.2l5.701 5.701-1.23 1.23-5.742-5.742V21h-1.737v-8.094l-5.77 5.77-1.23-1.217 5.743-5.742H.842V9.98h8.162l-5.701-5.7 1.23-1.231 5.66 5.66V.684h1.737Z");display:block}.is-style-asterisk:empty:before{content:none}.is-style-asterisk:-moz-only-whitespace:before{content:none}.is-style-asterisk.has-text-align-center:before{margin:0 auto}.is-style-asterisk.has-text-align-right:before{margin-left:auto}.rtl .is-style-asterisk.has-text-align-left:before{margin-right:auto}</style>',
+    "<link rel='stylesheet' id='wp-patterns-css' href='https://wp.smokenetwork.nl/wp-content/plugins/gutenberg/build/patterns/style.css?ver=17.8.0' media='all' />",
+    "<link rel='stylesheet' id='wp-reusable-blocks-css' href='https://wp.smokenetwork.nl/wp-content/plugins/gutenberg/build/reusable-blocks/style.css?ver=17.8.0' media='all' />",
+    "<link rel='stylesheet' id='wp-block-editor-content-css' href='https://wp.smokenetwork.nl/wp-content/plugins/gutenberg/build/block-editor/content.css?ver=17.8.0' media='all' />",
+    "<link rel='stylesheet' id='wp-edit-blocks-css' href='https://wp.smokenetwork.nl/wp-content/plugins/gutenberg/build/block-library/editor.css?ver=17.8.0' media='all' />",
     "<link rel='stylesheet' id='twentytwentyfour-button-style-outline-css' href='https://wp.smokenetwork.nl/wp-content/themes/twentytwentyfour/assets/css/button-outline.css?ver=1.0' media='all' />",
+
+
+
+    //"<link rel='stylesheet' id='wp-components-css' href='https:/wp.smokenetwork.nl/wp-includes/css/dist/components/style.min.css?ver=6.4.3' media='all' />",
+    //"<link rel='stylesheet' id='wp-block-editor-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/block-editor/style.min.css?ver=6.4.3' media='all' />",
+    //"<link rel='stylesheet' id='wp-reusable-blocks-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/reusable-blocks/style.min.css?ver=6.4.3' media='all' />",
+    //"<link rel='stylesheet' id='wp-patterns-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/patterns/style.min.css?ver=6.4.3' media='all' />",
+    //"<link rel='stylesheet' id='wp-editor-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/editor/style.min.css?ver=6.4.3' media='all' />",
+    //"<link rel='stylesheet' id='wp-block-library-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/block-library/style.min.css?ver=6.4.3' media='all' />",
+    //"<link rel='stylesheet' id='wp-block-editor-content-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/block-editor/content.min.css?ver=6.4.3' media='all' />",
+    //"<link rel='stylesheet' id='wp-edit-blocks-css' href='https://wp.smokenetwork.nl/wp-includes/css/dist/block-library/editor.min.css?ver=6.4.3' media='all' />",
+    //"<link rel='stylesheet' id='twentytwentyfour-button-style-outline-css' href='https://wp.smokenetwork.nl/wp-content/themes/twentytwentyfour/assets/css/button-outline.css?ver=1.0' media='all' />",
 ];
 
 var scripts = [

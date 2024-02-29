@@ -259,8 +259,8 @@ async function PostPage(options, matches) {
   console.log(options);
   console.log(matches);
 	// TODO::Make AJAX
-	//const response = await axios.post(`${routePrefix}/postPage`, matches)
-	//return response.data
+	const response = await axios.post(`/${routePrefix}/postPage/`, matches)
+	return response
 	return false;
 }
 
@@ -341,7 +341,7 @@ async function putBlock (options, matches) {
   const response = await axios.put(`${routePrefix}/blocks/${id}`, options.data)
   return response.data
 }
-e
+
 /**
  * Delete a reusable block
  * @param {Object} options

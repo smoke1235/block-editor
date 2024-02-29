@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlockEditor Playground</title>
     <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
+     
     </style>
 
 <script
@@ -21,18 +14,24 @@ integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 crossorigin="anonymous"></script>
     
   </head>
-  <body>
-    <div class="container">
-      <h1>Edit</h1>
-      <form id="form">
-        
-        <input type="hidden" id="contentEditor" class="content"  data-drupal-selector="gut" />
-        
-        <br />
-        <button class="button">Save</button>
-      </form>
+  <body class="js block-editor-page">
+
+    <div id="wpwrap">
+      <div id="wpcontent">
+        <div id="wpbody" role="main">
+          <div id="block-editor">
+            
+              <input type="hidden" id="contentEditor" class="content"  data-drupal-selector="gut" />
+            
+          
+        </div>
+        </div>
+      
     </div>
-    <div id="app"></div>
+
+    </div>
+
+    
     
     
    
