@@ -16,7 +16,21 @@ function getEditorSettings(settings) {
 
 
 async function init(target, type , pageID, settings) {
-    const { editPost, data } = wp;
+    const { editPost, data, preferencesPersistence, preferences } = wp;
+
+    // set Default settings
+    var userId = 1;
+	  var storageKey = "WP_DATA_USER_" + userId;
+	  data.use( data.plugins.persistence, { storageKey: storageKey } );
+
+    var serverData = {};
+    var userId = "1";
+    var persistenceLayer = preferencesPersistence.__unstableCreatePersistenceLayer( serverData, userId );
+    var preferencesStore = preferences.store;
+    data.dispatch( preferencesStore ).setPersistenceLayer( persistenceLayer );
+
+
+
     const editorSettings = getEditorSettings(settings);
 
     const element = document.getElementById(target);
@@ -113,7 +127,7 @@ async function init(target, type , pageID, settings) {
       localStorage.removeItem('wp-autosave-block-editor-post-1');
 
 
-    await wp.editPost.initializeEditor(mySelector, type, pageID, editorSettings);
+    await editPost.initializeEditor(mySelector, type, pageID, editorSettings, {"title":"","content":""});
 
 
       

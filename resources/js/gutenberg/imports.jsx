@@ -41,6 +41,7 @@ import * as serverSideRender from '@wordpress/server-side-render'
 import * as dataControls from '@wordpress/data-controls'
 import * as mediaUtils from '@wordpress/media-utils'
 import * as preferences from '@wordpress/preferences';
+import * as preferencesPersistence from '@wordpress/preferences-persistence';
 
 export const imports = {
   a11y,
@@ -77,6 +78,7 @@ export const imports = {
   notices,
   plugins,
   preferences,
+  preferencesPersistence,
   priorityQueue,
   reduxRoutine,
   richText,

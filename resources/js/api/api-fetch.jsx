@@ -256,6 +256,8 @@ async function GetPost(options, matches) {
 
 
 async function PostPage(options, matches) {
+  console.log(options);
+  console.log(matches);
 	// TODO::Make AJAX
 	//const response = await axios.post(`${routePrefix}/postPage`, matches)
 	//return response.data
@@ -306,17 +308,17 @@ async function getBlock (options, matches) {
     }
   } else {
     const id = matches[1]
-    const response = await axios.get(`${routePrefix}/blocks/${id}`)
+    const response = await axios.get(`/${routePrefix}/blocks/${id}`)
     return response.data
   }
 }
 
-/**
+/**ex
  * Get all reusable blocks
  */
 async function getBlocks () {
   //return [];
-  const response = await axios.get(`${routePrefix}/blocks`)
+  const response = await axios.get(`/${routePrefix}/blocks`)
   return response.data
 }
 
@@ -339,7 +341,7 @@ async function putBlock (options, matches) {
   const response = await axios.put(`${routePrefix}/blocks/${id}`, options.data)
   return response.data
 }
-
+e
 /**
  * Delete a reusable block
  * @param {Object} options

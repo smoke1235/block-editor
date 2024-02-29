@@ -20,6 +20,33 @@
 }
 
 
+.components-modal__frame *, 
+.components-modal__frame :after, 
+.components-modal__frame :before, 
+.components-popover *, 
+.components-popover :after, 
+.components-popover :before, 
+.editor__inserter-panel *, 
+.editor__inserter-panel :after, 
+.editor__inserter-panel :before,
+
+.editor-inserter-sidebar *, 
+.editor-inserter-sidebar :after, 
+.editor-inserter-sidebar :before, 
+
+.edit-post-header *, .edit-post-header :after, 
+.edit-post-header :before, .edit-post-sidebar *, 
+.edit-post-sidebar :after, 
+.edit-post-sidebar :before, 
+.edit-post-text-editor *, 
+.edit-post-text-editor :after, 
+.edit-post-text-editor :before, 
+.editor-post-publish-panel *, 
+.editor-post-publish-panel :after, 
+.editor-post-publish-panel :before {
+  box-sizing: inherit;
+}
+
 
 
   .components-panel__header.interface-complementary-area-header__small{
@@ -401,13 +428,68 @@
   }
   
   .edit-post-header__toolbar{
-    align-items:center;
+    
     display:flex;
-    flex-grow:3;
-    flex-shrink:8;
-    overflow:hidden;
-    padding:2px 0;
+    flex-grow:1;
+    
   }
+
+  .edit-post-header-toolbar {
+    align-items: center;
+    border: none;
+    display: inline-flex;
+}
+
+.editor-document-tools__left {
+  align-items: center;
+  display: inline-flex;
+  margin-right: 8px;
+  padding-left: 8px;
+}
+
+@media (min-width: 1280px) {
+.editor-document-tools__left {
+    padding-right: 8px;
+}
+}
+@media (min-width: 600px) {
+.editor-document-tools__left {
+    padding-left: 24px;
+}
+}
+
+.edit-post-header-toolbar .editor-document-tools__left>.components-button.has-icon.has-icon {
+  height: 32px;
+  margin-right: 8px;
+  min-width: 32px;
+  padding: 0;
+  width: 32px;
+}
+
+.edit-post-header-toolbar .editor-document-tools__left>.components-button.has-icon.is-pressed, 
+.edit-post-header-toolbar .editor-document-tools__left>.components-dropdown>.components-button.has-icon.is-pressed {
+  background: #1e1e1e;
+}
+
+.edit-post-header-toolbar .editor-document-tools__left> .editor-document-tools__inserter-toggle.is-pressed svg {
+  transform: rotate(45deg);
+}
+
+
+
+
+.editor-inserter-sidebar__content {
+    height: calc(100% - 44px);
+}
+
+@media (min-width: 782px) {
+.editor-inserter-sidebar__content {
+    height: 100%;
+}
+}
+
+
+
   .edit-post-header__toolbar .table-of-contents{
     display:none;
   }
@@ -1325,3 +1407,10 @@
       // }
     }
   }
+
+
+  .edit-post-editor__document-overview-panel, .editor-inserter-sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
