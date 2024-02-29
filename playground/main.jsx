@@ -35,8 +35,8 @@ var scripts = [
     "<script src='/js/wp-polyfill.js'></script>"
 ];
 
-var stylesStrings = styles.toString();
-var scriptsStrings = scripts.join();
+var stylesStrings = styles.join("");
+var scriptsStrings = scripts.join("");
 
 const init = BlockEditor.init;
 const wp = BlockEditor.wordpress;
