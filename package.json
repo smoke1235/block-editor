@@ -100,6 +100,7 @@
     "@wordpress/token-list": "^2.52.0",
     "@wordpress/url": "^3.53.0",
     "@wordpress/viewport": "^5.29.0",
-    "axios": "^1.6.7"
+    "axios": "^1.6.7",
+    "backbone": "^1.6.0"
   }
 }

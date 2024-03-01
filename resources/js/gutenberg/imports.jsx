@@ -42,6 +42,9 @@ import * as dataControls from '@wordpress/data-controls'
 import * as mediaUtils from '@wordpress/media-utils'
 import * as preferences from '@wordpress/preferences';
 import * as preferencesPersistence from '@wordpress/preferences-persistence';
+import media from "../extra/media-models";
+import { ajax } from '../extra/util';
+import * as Backbone from "../extra/backbone";
 
 export const imports = {
   a11y,
@@ -87,7 +90,10 @@ export const imports = {
   tokenList,
   url,
   viewport,
-  wordcount
+  wordcount,
+  media,
+  ajax,
+  Backbone
 }
 
 window.wp = {
