@@ -1,6 +1,6 @@
-var View = wp.media.View,
-	$ = Backbone.$,
-	Settings;
+import Backbone from "backbone";
+import View from "./view";
+
 
 /**
  * wp.media.view.Settings
@@ -12,7 +12,7 @@ var View = wp.media.View,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Settings = View.extend(/** @lends wp.media.view.Settings.prototype */{
+var Settings = View.extend(/** @lends wp.media.view.Settings.prototype */{
 	events: {
 		'click button':    'updateHandler',
 		'change input':    'updateHandler',

@@ -1,4 +1,5 @@
-var EditAttachmentMetadata;
+import State from "./state";
+import { l10n } from "../../lang";
 
 /**
  * wp.media.controller.EditAttachmentMetadata
@@ -11,12 +12,11 @@ var EditAttachmentMetadata;
  * @augments wp.media.controller.State
  * @augments Backbone.Model
  */
-EditAttachmentMetadata = wp.media.controller.State.extend(/** @lends wp.media.controller.EditAttachmentMetadata.prototype */{
+var EditAttachmentMetadata = State.extend(/** @lends wp.media.controller.EditAttachmentMetadata.prototype */{
 	defaults: {
 		id:      'edit-attachment',
 		// Title string passed to the frame's title region view.
-		//title:   l10n.attachmentDetails,
-		title:   "Attachment details",
+		title:   l10n.attachmentDetails,
 		// Region mode defaults.
 		content: 'edit-metadata',
 		menu:    false,

@@ -1,16 +1,15 @@
 /* global ClipboardJS */
 
 import Attachment from "../attachment";
+import { template as Template} from "../../../util";
 
-var l10n = wp.media.view.l10n,
-	$ = jQuery,
-	Details,
-	__ = wp.i18n.__;
+
+var Details;
 
 Details = Attachment.extend(/** @lends wp.media.view.Attachment.Details.prototype */{
 	tagName:   'div',
 	className: 'attachment-details',
-	template:  wp.template('attachment-details'),
+	template:  Template('attachment-details'),
 
 	/*
 	 * Reset all the attributes inherited from Attachment including role=checkbox,

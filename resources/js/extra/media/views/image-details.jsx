@@ -1,6 +1,7 @@
-var AttachmentDisplay = wp.media.view.Settings.AttachmentDisplay,
-	$ = jQuery,
-	ImageDetails;
+import _ from "underscore";
+import AttachmentDisplay from "./settings/attachment-display";
+import { template as Template } from "../../util";
+
 
 /**
  * wp.media.view.ImageDetails
@@ -14,9 +15,9 @@ var AttachmentDisplay = wp.media.view.Settings.AttachmentDisplay,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-ImageDetails = AttachmentDisplay.extend(/** @lends wp.media.view.ImageDetails.prototype */{
+var ImageDetails = AttachmentDisplay.extend(/** @lends wp.media.view.ImageDetails.prototype */{
 	className: 'image-details',
-	template:  wp.template('image-details'),
+	template:  Template('image-details'),
 	events: _.defaults( AttachmentDisplay.prototype.events, {
 		'click .edit-attachment': 'editAttachment',
 		'click .replace-attachment': 'replaceAttachment',

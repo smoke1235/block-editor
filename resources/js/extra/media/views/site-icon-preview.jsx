@@ -1,6 +1,5 @@
-var View = wp.media.View,
-	$ = jQuery,
-	SiteIconPreview;
+import View from "./view";
+import { template as Template } from "../../util";
 
 /**
  * wp.media.view.SiteIconPreview
@@ -14,9 +13,9 @@ var View = wp.media.View,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-SiteIconPreview = View.extend(/** @lends wp.media.view.SiteIconPreview.prototype */{
+var SiteIconPreview = View.extend(/** @lends wp.media.view.SiteIconPreview.prototype */{
 	className: 'site-icon-preview',
-	template: wp.template( 'site-icon-preview' ),
+	template: Template( 'site-icon-preview' ),
 
 	ready: function() {
 		this.controller.imgSelect.setOptions({

@@ -17,14 +17,14 @@
  * @augments Backbone.View
  */
 
-import Backbone from "../../backbone";
+import WPBackbone from "../utils/wpbackbone";
 
-var View = Backbone.View.extend(/** @lends wp.media.View.prototype */{
+var View = WPBackbone.View.extend(/** @lends wp.media.View.prototype */{
 	constructor: function( options ) {
 		if ( options && options.controller ) {
 			this.controller = options.controller;
 		}
-		wp.Backbone.View.apply( this, arguments );
+		WPBackbone.View.apply( this, arguments );
 	},
 	/**
 	 * @todo The internal comment mentions this might have been a stop-gap
@@ -64,7 +64,7 @@ var View = Backbone.View.extend(/** @lends wp.media.View.prototype */{
 		/**
 		 * call 'remove' directly on the parent class
 		 */
-		return wp.Backbone.View.prototype.remove.apply( this, arguments );
+		return WPBackbone.View.prototype.remove.apply( this, arguments );
 	}
 });
 

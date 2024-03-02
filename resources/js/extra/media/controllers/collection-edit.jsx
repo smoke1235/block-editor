@@ -1,6 +1,5 @@
 import Library from "./library";
-var $ = jQuery,
-	CollectionEdit;
+import { l10n } from "../../lang";
 
 /**
  * wp.media.controller.CollectionEdit
@@ -39,7 +38,7 @@ var $ = jQuery,
  * @param {string}                     attributes.type                   The collection's media type. (e.g. 'video').
  * @param {string}                     attributes.collectionType         The collection type. (e.g. 'playlist').
  */
-CollectionEdit = Library.extend(/** @lends wp.media.controller.CollectionEdit.prototype */{
+var CollectionEdit = Library.extend(/** @lends wp.media.controller.CollectionEdit.prototype */{
 	defaults: {
 		multiple:         false,
 		sortable:         true,

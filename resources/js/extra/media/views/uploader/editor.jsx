@@ -1,7 +1,6 @@
-var View = wp.media.View,
-	l10n = wp.media.view.l10n,
-	$ = jQuery,
-	EditorUploader;
+import View from "../view";
+import { template as Template } from "../../../util";
+
 
 /**
  * Creates a dropzone on WP editor instances (elements with .wp-editor-wrap)
@@ -16,10 +15,10 @@ var View = wp.media.View,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-EditorUploader = View.extend(/** @lends wp.media.view.EditorUploader.prototype */{
+var EditorUploader = View.extend(/** @lends wp.media.view.EditorUploader.prototype */{
 	tagName:   'div',
 	className: 'uploader-editor',
-	template:  wp.template( 'uploader-editor' ),
+	template: Template( 'uploader-editor' ),
 
 	localDrag: false,
 	overContainer: false,

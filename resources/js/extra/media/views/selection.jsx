@@ -1,6 +1,8 @@
-var _n = wp.i18n._n,
-	sprintf = wp.i18n.sprintf,
-	Selection;
+import { _n, sprintf } from "@wordpress/i18n";
+import View from "./view";
+import { template as Template } from "../../util";
+
+
 
 /**
  * wp.media.view.Selection
@@ -12,10 +14,10 @@ var _n = wp.i18n._n,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Selection = wp.media.View.extend(/** @lends wp.media.view.Selection.prototype */{
+Selection = View.extend(/** @lends wp.media.view.Selection.prototype */{
 	tagName:   'div',
 	className: 'media-selection',
-	template:  wp.template('media-selection'),
+	template: Template('media-selection'),
 
 	events: {
 		'click .edit-selection':  'edit',

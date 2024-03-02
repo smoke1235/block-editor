@@ -1,3 +1,5 @@
+import Attachment from "../attachment";
+
 /**
  * wp.media.view.Attachment.Library
  *
@@ -9,7 +11,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var Library = wp.media.view.Attachment.extend(/** @lends wp.media.view.Attachment.Library.prototype */{
+var Library = Attachment.extend(/** @lends wp.media.view.Attachment.Library.prototype */{
 	buttons: {
 		check: true
 	}

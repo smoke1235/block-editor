@@ -1,7 +1,6 @@
 import Select from "./select";
 import Library from "../../controllers/library";
 
-var Post;
 
 /**
  * wp.media.view.MediaFrame.Post
@@ -19,7 +18,7 @@ var Post;
  * @augments Backbone.View
  * @mixes wp.media.controller.StateMachine
  */
-Post = Select.extend(/** @lends wp.media.view.MediaFrame.Post.prototype */{
+var Post = Select.extend(/** @lends wp.media.view.MediaFrame.Post.prototype */{
 	initialize: function() {
 		this.counts = {
 			audio: {

@@ -22,7 +22,7 @@
  * @param {string} [options.filters]
  *
  */
-
+import _ from "underscore";
 import Backbone from "backbone";
 
 import Attachment from './attachment.jsx';

@@ -1,5 +1,5 @@
-var View = wp.media.View,
-	EditImage;
+import View from "./view";
+import { template as Template } from "../../util";
 
 /**
  * wp.media.view.EditImage
@@ -11,9 +11,9 @@ var View = wp.media.View,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-EditImage = View.extend(/** @lends wp.media.view.EditImage.prototype */{
+var EditImage = View.extend(/** @lends wp.media.view.EditImage.prototype */{
 	className: 'image-editor',
-	template: wp.template('image-editor'),
+	template: Template('image-editor'),
 
 	initialize: function( options ) {
 		this.editor = window.imageEdit;

@@ -1,6 +1,5 @@
 import View from "./view";
 
-var	AttachmentCompat;
 
 /**
  * wp.media.view.AttachmentCompat
@@ -14,7 +13,7 @@ var	AttachmentCompat;
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-AttachmentCompat = View.extend(/** @lends wp.media.view.AttachmentCompat.prototype */{
+var AttachmentCompat = View.extend(/** @lends wp.media.view.AttachmentCompat.prototype */{
 	tagName:   'form',
 	className: 'compat-item',
 

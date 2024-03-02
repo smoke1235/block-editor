@@ -1,3 +1,6 @@
+import Settings from "../settings";
+import { template as Template } from "../../../util";
+
 /**
  * wp.media.view.Settings.Playlist
  *
@@ -9,9 +12,9 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var Playlist = wp.media.view.Settings.extend(/** @lends wp.media.view.Settings.Playlist.prototype */{
+var Playlist = Settings.extend(/** @lends wp.media.view.Settings.Playlist.prototype */{
 	className: 'collection-settings playlist-settings',
-	template:  wp.template('playlist-settings')
+	template:  Template('playlist-settings')
 });
 
 export default Playlist;

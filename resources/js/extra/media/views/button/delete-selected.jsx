@@ -1,6 +1,4 @@
-var Button = wp.media.view.Button,
-	l10n = wp.media.view.l10n,
-	DeleteSelected;
+import Button from "../button";
 
 /**
  * wp.media.view.DeleteSelectedButton
@@ -15,7 +13,7 @@ var Button = wp.media.view.Button,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-DeleteSelected = Button.extend(/** @lends wp.media.view.DeleteSelectedButton.prototype */{
+var DeleteSelected = Button.extend(/** @lends wp.media.view.DeleteSelectedButton.prototype */{
 	initialize: function() {
 		Button.prototype.initialize.apply( this, arguments );
 		if ( this.options.filters ) {

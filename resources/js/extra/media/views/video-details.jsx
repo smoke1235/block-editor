@@ -1,5 +1,5 @@
-var MediaDetails = wp.media.view.MediaDetails,
-	VideoDetails;
+import MediaDetails from "./media-details";
+import { template as Template } from "../../util";
 
 /**
  * wp.media.view.VideoDetails
@@ -14,9 +14,9 @@ var MediaDetails = wp.media.view.MediaDetails,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-VideoDetails = MediaDetails.extend(/** @lends wp.media.view.VideoDetails.prototype */{
+var VideoDetails = MediaDetails.extend(/** @lends wp.media.view.VideoDetails.prototype */{
 	className: 'video-details',
-	template:  wp.template('video-details'),
+	template:  Template('video-details'),
 
 	setMedia: function() {
 		var video = this.$('.wp-video-shortcode');

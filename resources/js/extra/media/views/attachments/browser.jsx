@@ -1,11 +1,7 @@
-var View = wp.media.View,
-	mediaTrash = wp.media.view.settings.mediaTrash,
-	l10n = wp.media.view.l10n,
-	$ = jQuery,
-	AttachmentsBrowser,
-	infiniteScrolling = wp.media.view.settings.infiniteScrolling,
-	__ = wp.i18n.__,
-	sprintf = wp.i18n.sprintf;
+import _ from "underscore";
+import View from "../view";
+
+
 
 /**
  * wp.media.view.AttachmentsBrowser
@@ -29,7 +25,7 @@ var View = wp.media.View,
  * @param {boolean|string} [options.sidebar=true]  Whether to create a sidebar for the browser.
  *                                                 Accepts true, false, and 'errors'.
  */
-AttachmentsBrowser = View.extend(/** @lends wp.media.view.AttachmentsBrowser.prototype */{
+var AttachmentsBrowser = View.extend(/** @lends wp.media.view.AttachmentsBrowser.prototype */{
 	tagName:   'div',
 	className: 'attachments-browser',
 

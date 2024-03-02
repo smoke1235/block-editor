@@ -1,5 +1,6 @@
-var View = wp.media.View,
-	UploaderStatus;
+import View from "../view";
+import { template as Template} from "../../../util";
+
 
 /**
  * wp.media.view.UploaderStatus
@@ -13,9 +14,9 @@ var View = wp.media.View,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-UploaderStatus = View.extend(/** @lends wp.media.view.UploaderStatus.prototype */{
+var UploaderStatus = View.extend(/** @lends wp.media.view.UploaderStatus.prototype */{
 	className: 'media-uploader-status',
-	template:  wp.template('uploader-status'),
+	template:  Template('uploader-status'),
 
 	events: {
 		'click .upload-dismiss-errors': 'dismiss'

@@ -1,6 +1,4 @@
-var Toolbar = wp.media.view.Toolbar,
-	l10n = wp.media.view.l10n,
-	Select;
+import Toolbar from "../toolbar";
 
 /**
  * wp.media.view.Toolbar.Select
@@ -13,7 +11,7 @@ var Toolbar = wp.media.view.Toolbar,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Select = Toolbar.extend(/** @lends wp.media.view.Toolbar.Select.prototype */{
+var Select = Toolbar.extend(/** @lends wp.media.view.Toolbar.Select.prototype */{
 	initialize: function() {
 		var options = this.options;
 

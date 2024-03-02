@@ -1,4 +1,4 @@
-var MenuItem;
+import View from "./view";
 
 /**
  * wp.media.view.MenuItem
@@ -10,7 +10,7 @@ var MenuItem;
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-MenuItem = wp.media.View.extend(/** @lends wp.media.view.MenuItem.prototype */{
+var MenuItem = View.extend(/** @lends wp.media.view.MenuItem.prototype */{
 	tagName:   'button',
 	className: 'media-menu-item',
 

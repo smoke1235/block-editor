@@ -1,6 +1,5 @@
-var Button = wp.media.view.Button,
-	DeleteSelected = wp.media.view.DeleteSelectedButton,
-	DeleteSelectedPermanently;
+import Button from "../button";
+import DeleteSelected from "./delete-selected";
 
 /**
  * wp.media.view.DeleteSelectedPermanentlyButton
@@ -16,7 +15,7 @@ var Button = wp.media.view.Button,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-DeleteSelectedPermanently = DeleteSelected.extend(/** @lends wp.media.view.DeleteSelectedPermanentlyButton.prototype */{
+var DeleteSelectedPermanently = DeleteSelected.extend(/** @lends wp.media.view.DeleteSelectedPermanentlyButton.prototype */{
 	initialize: function() {
 		DeleteSelected.prototype.initialize.apply( this, arguments );
 		this.controller.on( 'select:activate', this.selectActivate, this );

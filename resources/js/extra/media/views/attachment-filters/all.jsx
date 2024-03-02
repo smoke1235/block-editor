@@ -1,5 +1,5 @@
-var l10n = wp.media.view.l10n,
-	All;
+import AttachmentFilters from "../attachment-filters";
+
 
 /**
  * wp.media.view.AttachmentFilters.All
@@ -12,7 +12,7 @@ var l10n = wp.media.view.l10n,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-All = wp.media.view.AttachmentFilters.extend(/** @lends wp.media.view.AttachmentFilters.All.prototype */{
+var All = AttachmentFilters.extend(/** @lends wp.media.view.AttachmentFilters.All.prototype */{
 	createFilters: function() {
 		var filters = {},
 			uid = window.userSettings ? parseInt( window.userSettings.uid, 10 ) : 0;

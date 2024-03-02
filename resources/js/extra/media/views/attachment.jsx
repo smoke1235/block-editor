@@ -1,7 +1,7 @@
+import _ from "underscore";
 import View from "./view";
+import { template as Template } from "../../util";
 
-var $ = jQuery,
-	Attachment;
 
 /**
  * wp.media.view.Attachment
@@ -13,10 +13,10 @@ var $ = jQuery,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Attachment = View.extend(/** @lends wp.media.view.Attachment.prototype */{
+var Attachment = View.extend(/** @lends wp.media.view.Attachment.prototype */{
 	tagName:   'li',
 	className: 'attachment',
-	template:  wp.template('attachment'),
+	template:  Template('attachment'),
 
 	attributes: function() {
 		return {

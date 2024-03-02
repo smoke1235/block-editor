@@ -1,5 +1,4 @@
-var View = wp.media.View,
-	Toolbar;
+import View from "./view";
 
 /**
  * wp.media.view.Toolbar
@@ -14,7 +13,7 @@ var View = wp.media.View,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Toolbar = View.extend(/** @lends wp.media.view.Toolbar.prototype */{
+var Toolbar = View.extend(/** @lends wp.media.view.Toolbar.prototype */{
 	tagName:   'div',
 	className: 'media-toolbar',
 

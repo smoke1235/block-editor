@@ -1,5 +1,4 @@
 import Select from "./select";
-var ImageDetails;
 
 /**
  * wp.media.view.MediaFrame.ImageDetails
@@ -18,7 +17,7 @@ var ImageDetails;
  * @augments Backbone.View
  * @mixes wp.media.controller.StateMachine
  */
-ImageDetails = Select.extend(/** @lends wp.media.view.MediaFrame.ImageDetails.prototype */{
+var ImageDetails = Select.extend(/** @lends wp.media.view.MediaFrame.ImageDetails.prototype */{
 	defaults: {
 		id:      'image',
 		url:     '',

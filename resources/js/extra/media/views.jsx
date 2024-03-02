@@ -1,4 +1,7 @@
 
+import Backbone from "backbone";
+
+
 import Region from "./controllers/region";
 import StateMachine from "./controllers/state-machine";
 import State from "./controllers/state";
@@ -91,21 +94,7 @@ import Heading from "./views/heading.jsx";
  * @output wp-includes/js/media-views.js
  */
 
-var media = wp.media,
-	$ = jQuery,
-	l10n;
 
-media.isTouchDevice = ( 'ontouchend' in document );
-
-// Link any localized strings.
-l10n = media.view.l10n = window._wpMediaViewsL10n || {};
-
-// Link any settings.
-media.view.settings = l10n.settings || {};
-delete l10n.settings;
-
-// Copy the `post` setting over to the model settings.
-media.model.settings.post = media.view.settings.post;
 
 // Check if the browser supports CSS 3.0 transitions.
 $.support.transition = (function(){

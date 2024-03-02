@@ -1,6 +1,5 @@
-var Select = wp.media.view.Toolbar.Select,
-	l10n = wp.media.view.l10n,
-	Embed;
+import Select from "./select";
+
 
 /**
  * wp.media.view.Toolbar.Embed
@@ -14,7 +13,7 @@ var Select = wp.media.view.Toolbar.Select,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Embed = Select.extend(/** @lends wp.media.view.Toolbar.Embed.prototype */{
+var Embed = Select.extend(/** @lends wp.media.view.Toolbar.Embed.prototype */{
 	initialize: function() {
 		_.defaults( this.options, {
 			text: l10n.insertIntoPost,

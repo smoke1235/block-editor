@@ -1,3 +1,5 @@
+import View from "./view";
+
 /**
  * wp.media.view.Label
  *
@@ -8,7 +10,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var Label = wp.media.View.extend(/** @lends wp.media.view.Label.prototype */{
+var Label = View.extend(/** @lends wp.media.view.Label.prototype */{
 	tagName: 'label',
 	className: 'screen-reader-text',
 

@@ -1,5 +1,5 @@
-var MediaDetails = wp.media.view.MediaDetails,
-	AudioDetails;
+import MediaDetails from "./frame/media-details";
+import { template as Template } from "../../util";
 
 /**
  * wp.media.view.AudioDetails
@@ -14,9 +14,9 @@ var MediaDetails = wp.media.view.MediaDetails,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-AudioDetails = MediaDetails.extend(/** @lends wp.media.view.AudioDetails.prototype */{
+var AudioDetails = MediaDetails.extend(/** @lends wp.media.view.AudioDetails.prototype */{
 	className: 'audio-details',
-	template:  wp.template('audio-details'),
+	template: Template('audio-details'),
 
 	setMedia: function() {
 		var audio = this.$('.wp-audio-shortcode');

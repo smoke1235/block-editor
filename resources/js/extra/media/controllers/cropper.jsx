@@ -1,5 +1,5 @@
 import State from "./state";
-var Cropper;
+import { l10n } from "../../lang";
 
 /**
  * wp.media.controller.Cropper
@@ -12,11 +12,10 @@ var Cropper;
  * @augments wp.media.controller.State
  * @augments Backbone.Model
  */
-Cropper = State.extend(/** @lends wp.media.controller.Cropper.prototype */{
+var Cropper = State.extend(/** @lends wp.media.controller.Cropper.prototype */{
 	defaults: {
 		id:          'cropper',
-		//title:       l10n.cropImage,
-		title:       "Crop image",
+		title:       l10n.cropImage,
 		// Region mode defaults.
 		toolbar:     'crop',
 		content:     'crop',

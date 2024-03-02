@@ -1,5 +1,4 @@
-var l10n = wp.media.view.l10n,
-	Uploaded;
+import AttachmentFilters from "../attachment-filters";
 
 /**
  * wp.media.view.AttachmentFilters.Uploaded
@@ -12,7 +11,7 @@ var l10n = wp.media.view.l10n,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Uploaded = wp.media.view.AttachmentFilters.extend(/** @lends wp.media.view.AttachmentFilters.Uploaded.prototype */{
+var Uploaded = AttachmentFilters.extend(/** @lends wp.media.view.AttachmentFilters.Uploaded.prototype */{
 	createFilters: function() {
 		var type = this.model.get('type'),
 			types = wp.media.view.settings.mimeTypes,

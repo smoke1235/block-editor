@@ -1,3 +1,5 @@
+import PriorityList from "./priority-list";
+
 /**
  * wp.media.view.Sidebar
  *
@@ -9,7 +11,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var Sidebar = wp.media.view.PriorityList.extend(/** @lends wp.media.view.Sidebar.prototype */{
+var Sidebar = PriorityList.extend(/** @lends wp.media.view.Sidebar.prototype */{
 	className: 'media-sidebar'
 });
 

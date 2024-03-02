@@ -1,4 +1,5 @@
-var $ = jQuery;
+import $ from "jquery";
+import View from "./view";
 
 /**
  * wp.media.view.FocusManager
@@ -10,7 +11,7 @@ var $ = jQuery;
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var FocusManager = wp.media.View.extend(/** @lends wp.media.view.FocusManager.prototype */{
+var FocusManager = View.extend(/** @lends wp.media.view.FocusManager.prototype */{
 
 	events: {
 		'keydown': 'focusManagementMode'

@@ -1,7 +1,8 @@
+import _ from "underscore";
 import Frame from "./frame";
 import { template as Template } from "../../util";
+import { l10n } from "../../lang";
 
-var MediaFrame;
 
 /**
  * wp.media.view.MediaFrame
@@ -17,7 +18,7 @@ var MediaFrame;
  * @augments Backbone.View
  * @mixes wp.media.controller.StateMachine
  */
-MediaFrame = Frame.extend(/** @lends wp.media.view.MediaFrame.prototype */{
+var MediaFrame = Frame.extend(/** @lends wp.media.view.MediaFrame.prototype */{
 	className: 'media-frame',
 	template:  Template('media-frame'),
 	regions:   ['menu','title','content','toolbar','router'],

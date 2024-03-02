@@ -10,7 +10,7 @@ import Query from "./media/models/query.jsx";
 import PostImage from "./media/models/post-image.jsx";
 import Selection from './media/models/selection.jsx';
 import { ajax, template } from './util.jsx';
-import { view } from './media/views.jsx';
+import MediaFrame from "./media/views/media-frame.jsx";
 
 window.wp = window.wp || {};
 
@@ -28,8 +28,9 @@ window.wp = window.wp || {};
  * @return {wp.media.view.MediaFrame} A media workflow.
  */
 media = function( attributes ) {
-	var MediaFrame = view.MediaFrame,
-		frame;
+	var frame;
+
+	console.log(MediaFrame);
 
 	if ( ! MediaFrame ) {
 		return;
@@ -81,6 +82,9 @@ media.model.Attachments = Attachments;
 media.model.Query = Query;
 media.model.PostImage = PostImage;
 media.model.Selection = Selection;
+
+media.isTouchDevice = ( 'ontouchend' in document );
+// media.model.settings.post = media.view.settings.post; ?
 
 /**
  * ========================================================================

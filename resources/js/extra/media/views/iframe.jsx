@@ -1,3 +1,5 @@
+import View from "./view";
+
 /**
  * wp.media.view.Iframe
  *
@@ -8,7 +10,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var Iframe = wp.media.View.extend(/** @lends wp.media.view.Iframe.prototype */{
+var Iframe = View.extend(/** @lends wp.media.view.Iframe.prototype */{
 	className: 'media-iframe',
 	/**
 	 * @return {wp.media.view.Iframe} Returns itself to allow chaining.

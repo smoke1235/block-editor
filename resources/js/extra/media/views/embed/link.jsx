@@ -1,6 +1,7 @@
-var $ = jQuery,
-	EmbedLink;
-
+import _ from "underscore";
+import {template as Template} from "../../../util";
+import Settings from "../settings";
+import Embed from "../../controllers/embed";
 /**
  * wp.media.view.EmbedLink
  *
@@ -12,9 +13,9 @@ var $ = jQuery,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-EmbedLink = wp.media.view.Settings.extend(/** @lends wp.media.view.EmbedLink.prototype */{
+var EmbedLink = Settings.extend(/** @lends wp.media.view.EmbedLink.prototype */{
 	className: 'embed-link-settings',
-	template:  wp.template('embed-link-settings'),
+	template:  Template('embed-link-settings'),
 
 	initialize: function() {
 		this.listenTo( this.model, 'change:url', this.updateoEmbed );
@@ -34,7 +35,7 @@ EmbedLink = wp.media.view.Settings.extend(/** @lends wp.media.view.EmbedLink.pro
 		}
 
 		this.fetch();
-	}, wp.media.controller.Embed.sensitivity ),
+	}, Embed.sensitivity ),
 
 	fetch: function() {
 		var url = this.model.get( 'url' ), re, youTubeEmbedMatch;

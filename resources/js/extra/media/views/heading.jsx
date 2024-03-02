@@ -1,3 +1,5 @@
+import View from "./view";
+
 /**
  * wp.media.view.Heading
  *
@@ -10,7 +12,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var Heading = wp.media.View.extend( {
+var Heading = View.extend( {
 	tagName: function() {
 		return this.options.level || 'h1';
 	},

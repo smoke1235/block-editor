@@ -1,3 +1,4 @@
+import _ from "underscore";
 import Selection from "../models/selection";
 import Library from "./library";
 var GalleryAdd;

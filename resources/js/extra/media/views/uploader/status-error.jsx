@@ -1,3 +1,6 @@
+import View from "../view";
+import { template as Template} from "../../../util";
+
 /**
  * wp.media.view.UploaderStatusError
  *
@@ -8,9 +11,9 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var UploaderStatusError = wp.media.View.extend(/** @lends wp.media.view.UploaderStatusError.prototype */{
+var UploaderStatusError = View.extend(/** @lends wp.media.view.UploaderStatusError.prototype */{
 	className: 'upload-error',
-	template:  wp.template('uploader-status-error')
+	template:  Template('uploader-status-error')
 });
 
 export default UploaderStatusError;

@@ -1,8 +1,7 @@
-var Frame = wp.media.view.Frame,
-	MediaFrame = wp.media.view.MediaFrame,
+import Frame from "../frame";
+import MediaFrame from "../media-frame";
 
-	$ = jQuery,
-	EditAttachments;
+import { template as Template } from "../../../util";
 
 /**
  * wp.media.view.MediaFrame.EditAttachments
@@ -22,10 +21,10 @@ var Frame = wp.media.view.Frame,
  * @augments Backbone.View
  * @mixes wp.media.controller.StateMachine
  */
-EditAttachments = MediaFrame.extend(/** @lends wp.media.view.MediaFrame.EditAttachments.prototype */{
+var EditAttachments = MediaFrame.extend(/** @lends wp.media.view.MediaFrame.EditAttachments.prototype */{
 
 	className: 'edit-attachment-frame',
-	template:  wp.template( 'edit-attachment-frame' ),
+	template:  Template( 'edit-attachment-frame' ),
 	regions:   [ 'title', 'content' ],
 
 	events: {

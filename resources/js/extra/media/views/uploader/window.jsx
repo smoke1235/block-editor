@@ -1,5 +1,7 @@
-var $ = jQuery,
-	UploaderWindow;
+import View from "../view";
+
+import { template as Template } from "../../../util";
+
 
 /**
  * wp.media.view.UploaderWindow
@@ -19,10 +21,10 @@ var $ = jQuery,
  * @param {jQuery} [options.uploader.dropzone] jQuery collection of the dropzone.
  * @param {object} [options.uploader.params]
  */
-UploaderWindow = wp.media.View.extend(/** @lends wp.media.view.UploaderWindow.prototype */{
+var UploaderWindow = View.extend(/** @lends wp.media.view.UploaderWindow.prototype */{
 	tagName:   'div',
 	className: 'uploader-window',
-	template:  wp.template('uploader-window'),
+	template:  Template('uploader-window'),
 
 	initialize: function() {
 		var uploader;

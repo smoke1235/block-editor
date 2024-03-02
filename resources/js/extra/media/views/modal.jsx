@@ -1,5 +1,8 @@
-var $ = jQuery,
-	Modal;
+import _ from "underscore";
+import View from "./view";
+import {template as Template } from "../../util";
+
+var Modal;
 
 /**
  * wp.media.view.Modal
@@ -13,9 +16,9 @@ var $ = jQuery,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Modal = wp.media.View.extend(/** @lends wp.media.view.Modal.prototype */{
+Modal = View.extend(/** @lends wp.media.view.Modal.prototype */{
 	tagName:  'div',
-	template: wp.template('media-modal'),
+	template: Template('media-modal'),
 
 	events: {
 		'click .media-modal-backdrop, .media-modal-close': 'escapeHandler',

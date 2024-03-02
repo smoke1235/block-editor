@@ -1,7 +1,4 @@
-var View = wp.media.View,
-	$ = jQuery,
-	l10n = wp.media.view.l10n,
-	EmbedUrl;
+import View from "../view";
 
 /**
  * wp.media.view.EmbedUrl
@@ -13,7 +10,7 @@ var View = wp.media.View,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-EmbedUrl = View.extend(/** @lends wp.media.view.EmbedUrl.prototype */{
+var EmbedUrl = View.extend(/** @lends wp.media.view.EmbedUrl.prototype */{
 	tagName:   'span',
 	className: 'embed-url',
 

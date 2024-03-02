@@ -1,3 +1,4 @@
+import MenuItem from "./menu-item";
 /**
  * wp.media.view.RouterItem
  *
@@ -9,7 +10,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var RouterItem = wp.media.view.MenuItem.extend(/** @lends wp.media.view.RouterItem.prototype */{
+var RouterItem = MenuItem.extend(/** @lends wp.media.view.RouterItem.prototype */{
 	/**
 	 * On click handler to activate the content region's corresponding mode.
 	 */

@@ -1,3 +1,5 @@
+import View from "./view";
+
 /**
  * wp.media.view.Button
  *
@@ -8,7 +10,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var Button = wp.media.View.extend(/** @lends wp.media.view.Button.prototype */{
+var Button = View.extend(/** @lends wp.media.view.Button.prototype */{
 	tagName:    'button',
 	className:  'media-button',
 	attributes: { type: 'button' },

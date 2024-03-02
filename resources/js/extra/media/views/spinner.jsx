@@ -1,3 +1,4 @@
+import View from "./view";
 /**
  * wp.media.view.Spinner
  *
@@ -12,7 +13,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var Spinner = wp.media.View.extend(/** @lends wp.media.view.Spinner.prototype */{
+var Spinner = View.extend(/** @lends wp.media.view.Spinner.prototype */{
 	tagName:   'span',
 	className: 'spinner',
 	spinnerTimeout: false,

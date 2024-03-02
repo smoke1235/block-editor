@@ -1,6 +1,5 @@
 import MediaFrame from "../media-frame";
 
-var Select;
 
 /**
  * wp.media.view.MediaFrame.Select
@@ -17,7 +16,7 @@ var Select;
  * @augments Backbone.View
  * @mixes wp.media.controller.StateMachine
  */
-Select = MediaFrame.extend(/** @lends wp.media.view.MediaFrame.Select.prototype */{
+var Select = MediaFrame.extend(/** @lends wp.media.view.MediaFrame.Select.prototype */{
 	initialize: function() {
 		// Call 'initialize' directly on the parent class.
 		MediaFrame.prototype.initialize.apply( this, arguments );

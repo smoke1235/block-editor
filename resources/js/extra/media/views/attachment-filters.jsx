@@ -1,5 +1,4 @@
-var $ = jQuery,
-	AttachmentFilters;
+import View from "./view";
 
 /**
  * wp.media.view.AttachmentFilters
@@ -11,7 +10,7 @@ var $ = jQuery,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-AttachmentFilters = wp.media.View.extend(/** @lends wp.media.view.AttachmentFilters.prototype */{
+var AttachmentFilters = View.extend(/** @lends wp.media.view.AttachmentFilters.prototype */{
 	tagName:   'select',
 	className: 'attachment-filters',
 	id:        'media-attachment-filters',

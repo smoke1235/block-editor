@@ -1,8 +1,5 @@
-var View = wp.media.View,
-	UploaderStatus = wp.media.view.UploaderStatus,
-	l10n = wp.media.view.l10n,
-	$ = jQuery,
-	Cropper;
+import View from "./view";
+import { template as Template } from "../../util";
 
 /**
  * wp.media.view.Cropper
@@ -20,9 +17,9 @@ var View = wp.media.View,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Cropper = View.extend(/** @lends wp.media.view.Cropper.prototype */{
+var Cropper = View.extend(/** @lends wp.media.view.Cropper.prototype */{
 	className: 'crop-content',
-	template: wp.template('crop-content'),
+	template: Template('crop-content'),
 	initialize: function() {
 		_.bindAll(this, 'onImageLoad');
 	},

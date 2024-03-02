@@ -1,5 +1,5 @@
-var AttachmentDisplay = wp.media.view.Settings.AttachmentDisplay,
-	EmbedImage;
+import AttachmentDisplay from "../settings/attachment-display";
+import { template as Template } from "../../../util";
 
 /**
  * wp.media.view.EmbedImage
@@ -13,9 +13,9 @@ var AttachmentDisplay = wp.media.view.Settings.AttachmentDisplay,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-EmbedImage = AttachmentDisplay.extend(/** @lends wp.media.view.EmbedImage.prototype */{
+var EmbedImage = AttachmentDisplay.extend(/** @lends wp.media.view.EmbedImage.prototype */{
 	className: 'embed-media-settings',
-	template:  wp.template('embed-image-settings'),
+	template:  Template('embed-image-settings'),
 
 	initialize: function() {
 		/**

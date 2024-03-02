@@ -1,3 +1,5 @@
+import View from "./view";
+
 /**
  * wp.media.view.PriorityList
  *
@@ -8,7 +10,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var PriorityList = wp.media.View.extend(/** @lends wp.media.view.PriorityList.prototype */{
+var PriorityList = View.extend(/** @lends wp.media.view.PriorityList.prototype */{
 	tagName:   'div',
 
 	initialize: function() {

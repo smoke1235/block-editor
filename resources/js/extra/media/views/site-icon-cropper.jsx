@@ -1,5 +1,4 @@
-var View = wp.media.view,
-	SiteIconCropper;
+import Cropper from "./cropper";
 
 /**
  * wp.media.view.SiteIconCropper
@@ -17,7 +16,7 @@ var View = wp.media.view,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-SiteIconCropper = View.Cropper.extend(/** @lends wp.media.view.SiteIconCropper.prototype */{
+var SiteIconCropper = Cropper.extend(/** @lends wp.media.view.SiteIconCropper.prototype */{
 	className: 'crop-content site-icon',
 
 	ready: function () {

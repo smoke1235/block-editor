@@ -1,3 +1,5 @@
+import Selection from "../selection";
+
 /**
  * wp.media.view.Attachment.EditSelection
  *
@@ -10,7 +12,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var EditSelection = wp.media.view.Attachment.Selection.extend(/** @lends wp.media.view.Attachment.EditSelection.prototype */{
+var EditSelection = Selection.extend(/** @lends wp.media.view.Attachment.EditSelection.prototype */{
 	buttons: {
 		close: true
 	}

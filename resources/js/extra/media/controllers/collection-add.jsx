@@ -1,6 +1,7 @@
+import _ from 'underscore';
 import Selection from "../models/selection";
 import Library from "./library";
-var CollectionAdd;
+
 
 /**
  * wp.media.controller.CollectionAdd
@@ -37,7 +38,7 @@ var CollectionAdd;
  * @param {string}                     attributes.type                      The collection's media type. (e.g. 'video').
  * @param {string}                     attributes.collectionType            The collection type. (e.g. 'playlist').
  */
-CollectionAdd = Library.extend(/** @lends wp.media.controller.CollectionAdd.prototype */{
+var CollectionAdd = Library.extend(/** @lends wp.media.controller.CollectionAdd.prototype */{
 	defaults: _.defaults( {
 		// Selection defaults. @see media.model.Selection
 		multiple:      'add',

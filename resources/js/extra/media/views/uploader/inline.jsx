@@ -1,5 +1,5 @@
-var View = wp.media.View,
-	UploaderInline;
+import View from "../view";
+import { template as Template } from "../../../util";
 
 /**
  * wp.media.view.UploaderInline
@@ -13,10 +13,10 @@ var View = wp.media.View,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-UploaderInline = View.extend(/** @lends wp.media.view.UploaderInline.prototype */{
+var UploaderInline = View.extend(/** @lends wp.media.view.UploaderInline.prototype */{
 	tagName:   'div',
 	className: 'uploader-inline',
-	template:  wp.template('uploader-inline'),
+	template:  Template('uploader-inline'),
 
 	events: {
 		'click .close': 'hide'

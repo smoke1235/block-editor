@@ -1,4 +1,5 @@
 import Backbone from "backbone";
+import _ from "underscore";
 
 /**
  * wp.media.controller.StateMachine

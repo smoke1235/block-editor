@@ -1,4 +1,5 @@
-var Search;
+import _ from "underscore";
+import View from "./view";
 
 /**
  * wp.media.view.Search
@@ -10,7 +11,7 @@ var Search;
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Search = wp.media.View.extend(/** @lends wp.media.view.Search.prototype */{
+var Search = View.extend(/** @lends wp.media.view.Search.prototype */{
 	tagName:   'input',
 	className: 'search',
 	id:        'media-search-input',

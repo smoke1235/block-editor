@@ -1,5 +1,5 @@
-var Menu = wp.media.view.Menu,
-	Router;
+import Menu from "./menu";
+import RouterItem from "./router-item";
 
 /**
  * wp.media.view.Router
@@ -13,11 +13,11 @@ var Menu = wp.media.view.Menu,
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-Router = Menu.extend(/** @lends wp.media.view.Router.prototype */{
+var Router = Menu.extend(/** @lends wp.media.view.Router.prototype */{
 	tagName:   'div',
 	className: 'media-router',
 	property:  'contentMode',
-	ItemView:  wp.media.view.RouterItem,
+	ItemView:  RouterItem,
 	region:    'router',
 
 	attributes: {

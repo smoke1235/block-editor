@@ -1,3 +1,5 @@
+import View from "./view";
+
 /**
  * wp.media.view.Embed
  *
@@ -8,7 +10,7 @@
  * @augments wp.Backbone.View
  * @augments Backbone.View
  */
-var Embed = wp.media.View.extend(/** @lends wp.media.view.Ember.prototype */{
+var Embed = View.extend(/** @lends wp.media.view.Ember.prototype */{
 	className: 'media-embed',
 
 	initialize: function() {

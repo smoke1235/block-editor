@@ -1,9 +1,6 @@
-var View = wp.media.View,
-	$ = jQuery,
-	Attachments,
-	infiniteScrolling = wp.media.view.settings.infiniteScrolling;
+import View from "./view";
 
-Attachments = View.extend(/** @lends wp.media.view.Attachments.prototype */{
+var Attachments = View.extend(/** @lends wp.media.view.Attachments.prototype */{
 	tagName:   'ul',
 	className: 'attachments',
 

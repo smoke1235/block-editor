@@ -1,3 +1,5 @@
+import _ from "underscore";
+
 /**
  * @output wp-includes/js/wp-util.js
  */

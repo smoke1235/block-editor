@@ -1,8 +1,7 @@
-var MediaFrame = wp.media.view.MediaFrame,
-	Library = wp.media.controller.Library,
+import MediaFrame from "../media-frame";
+import Library from "../../controllers/library";
+import Backbone from "backbone";
 
-	$ = Backbone.$,
-	Manage;
 
 /**
  * wp.media.view.MediaFrame.Manage
@@ -21,7 +20,7 @@ var MediaFrame = wp.media.view.MediaFrame,
  * @augments Backbone.View
  * @mixes wp.media.controller.StateMachine
  */
-Manage = MediaFrame.extend(/** @lends wp.media.view.MediaFrame.Manage.prototype */{
+var Manage = MediaFrame.extend(/** @lends wp.media.view.MediaFrame.Manage.prototype */{
 	/**
 	 * @constructs
 	 */
