@@ -58,6 +58,12 @@ const requests = {
     regex: /\/wp\/v2\/media/g,
     run: postMedia
   },
+
+  getMedia: {
+    method: 'GET',
+    regex: /\/wp\/v2\/media/g,
+    run: getMedia
+  },
   optionsMedia: {
     method: 'OPTIONS',
     regex: /\/wp\/v2\/media/g,
@@ -191,6 +197,10 @@ const requests = {
 
 
  
+}
+
+async function getMedia() {
+  
 }
 
 

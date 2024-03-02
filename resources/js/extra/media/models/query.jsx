@@ -1,7 +1,7 @@
-
+import _ from "underscore";
+import jQuery from "jquery";
 import Attachments from './attachments.jsx';
-
-var Query;
+import { l10n } from "../../lang.jsx";
 
 /**
  * wp.media.model.Query
@@ -22,7 +22,7 @@ var Query;
  * @param {object} [options.args]                Attachments query arguments.
  * @param {object} [options.args.posts_per_page]
  */
-Query = Attachments.extend(/** @lends wp.media.model.Query.prototype */{
+var Query = Attachments.extend(/** @lends wp.media.model.Query.prototype */{
 	/**
 	 * @param {Array}  [models=[]]  Array of initial models to populate the collection.
 	 * @param {Object} [options={}]
@@ -138,7 +138,7 @@ Query = Attachments.extend(/** @lends wp.media.model.Query.prototype */{
 			options.context = this;
 			options.data = _.extend( options.data || {}, {
 				action:  'query-attachments',
-				post_id: wp.media.model.settings.post.id
+				post_id: l10n.settings.post.id
 			});
 
 			// Clone the args so manipulation is non-destructive.

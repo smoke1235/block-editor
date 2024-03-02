@@ -1,6 +1,11 @@
 import _ from "underscore";
+import $ from "jquery";
 import View from "../view";
+import {l10n} from "../../../lang";
+import {__, sprintf} from "@wordpress/i18n";
 
+var mediaTrash = l10n.settings.mediaTrash;
+var infiniteScrolling = l10n.settings.infiniteScrolling;
 
 
 /**

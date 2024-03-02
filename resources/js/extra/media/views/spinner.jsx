@@ -1,4 +1,6 @@
+import _ from "underscore";
 import View from "./view";
+
 /**
  * wp.media.view.Spinner
  *

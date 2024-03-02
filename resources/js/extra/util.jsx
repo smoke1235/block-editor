@@ -1,4 +1,7 @@
 import _ from "underscore";
+import $ from "jquery";
+
+var settings = typeof window._wpUtilSettings === 'undefined' ? {} : window._wpUtilSettings;
 
 /**
  * @output wp-includes/js/wp-util.js

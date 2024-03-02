@@ -3,6 +3,7 @@ import "../scss/extra.scss"
 
 
 import './lib/env'
+import "./lib/cookie";
 
 
 

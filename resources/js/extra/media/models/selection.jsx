@@ -1,4 +1,5 @@
 
+import _ from "underscore";
 import Attachments from './attachments.jsx';
 
 var Selection;

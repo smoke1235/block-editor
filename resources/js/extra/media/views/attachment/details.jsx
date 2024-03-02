@@ -1,12 +1,14 @@
-/* global ClipboardJS */
 
+import _ from "underscore";
+import $ from "jquery";
+import { __ } from "@wordpress/i18n";
+import ClipboardJS  from "clipboard";
 import Attachment from "../attachment";
 import { template as Template} from "../../../util";
+import { l10n } from "../../../lang";
 
 
-var Details;
-
-Details = Attachment.extend(/** @lends wp.media.view.Attachment.Details.prototype */{
+var Details = Attachment.extend(/** @lends wp.media.view.Attachment.Details.prototype */{
 	tagName:   'div',
 	className: 'attachment-details',
 	template:  Template('attachment-details'),

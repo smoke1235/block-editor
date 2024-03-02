@@ -1,3 +1,5 @@
+import _ from "underscore";
+import wpBackbone from "../utils/wpbackbone";
 import View from "./view";
 
 /**
@@ -42,7 +44,7 @@ var PriorityList = View.extend(/** @lends wp.media.view.PriorityList.prototype *
 			return this;
 		}
 
-		if ( ! (view instanceof Backbone.View) ) {
+		if ( ! (view instanceof wpBackbone.View) ) {
 			view = this.toView( view, id, options );
 		}
 		view.controller = view.controller || this.controller;

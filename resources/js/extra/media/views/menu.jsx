@@ -1,3 +1,4 @@
+import _ from "underscore";
 import MenuItem from "./menu-item";
 import PriorityList from "./priority-list";
 

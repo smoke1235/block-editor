@@ -4,7 +4,7 @@ export const media = {
   headers: {
     get: value => {
       if (value === 'allow') {
-        return ['POST']
+        return ['GET', 'POST']
       }
     }
   }

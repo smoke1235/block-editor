@@ -1,5 +1,6 @@
 import Backbone from "backbone";
 import _ from 'underscore';
+import $ from "jquery";
 
 /**
  * @output wp-includes/js/wp-backbone.js

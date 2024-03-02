@@ -2,6 +2,7 @@ import _ from "underscore";
 import View from "../views/view";
 import State from "./state";
 import selectionSync from "../utils/selection-sync";
+import { l10n } from "../../lang";
 
 var getUserSetting = window.getUserSetting,
 	setUserSetting = window.setUserSetting,
@@ -46,8 +47,7 @@ var getUserSetting = window.getUserSetting,
 Library = State.extend(/** @lends wp.media.controller.Library.prototype */{
 	defaults: {
 		id:                 'library',
-		//title:              l10n.mediaLibraryTitle,
-		title:              "Media Library",		
+		title:              l10n.mediaLibraryTitle,
 		multiple:           false,
 		content:            'upload',
 		menu:               'default',
@@ -143,7 +143,7 @@ Library = State.extend(/** @lends wp.media.controller.Library.prototype */{
 	 * @since 3.5.0
 	 */
 	resetDisplays: function() {
-		var defaultProps = wp.media.view.settings.defaultProps;
+		var defaultProps = {align: "", link: "none", size: ""};
 		this._displays = [];
 		this._defaultDisplaySettings = {
 			align: getUserSetting( 'align', defaultProps.align ) || 'none',

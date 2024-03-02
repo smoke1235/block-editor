@@ -1,4 +1,9 @@
+import _ from "underscore";
+import $ from "jquery";
 import View from "./view";
+
+import { l10n } from "../../lang";
+var infiniteScrolling = l10n.settings.infiniteScrolling;
 
 var Attachments = View.extend(/** @lends wp.media.view.Attachments.prototype */{
 	tagName:   'ul',

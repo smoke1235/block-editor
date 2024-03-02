@@ -1,3 +1,4 @@
+import _ from "underscore";
 import View from "../view";
 import { template as Template } from "../../../util";
 
@@ -34,7 +35,8 @@ var UploaderInline = View.extend(/** @lends wp.media.view.UploaderInline.prototy
 		}
 
 		if ( _.isUndefined( this.options.postId ) ) {
-			this.options.postId = wp.media.view.settings.post.id;
+			//this.options.postId = wp.media.view.settings.post.id;
+			this.options.postId = 1;
 		}
 
 		if ( this.options.status ) {

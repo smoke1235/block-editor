@@ -1,3 +1,5 @@
+import _ from "underscore";
+import wpBackbone from "../utils/wpbackbone";
 import View from "./view";
 
 /**
@@ -88,7 +90,7 @@ var Toolbar = View.extend(/** @lends wp.media.view.Toolbar.prototype */{
 			}, this );
 
 		} else {
-			if ( ! ( view instanceof Backbone.View ) ) {
+			if ( ! ( view instanceof wpBackbone.View ) ) {
 				view.classes = [ 'media-button-' + id ].concat( view.classes || [] );
 				view = new wp.media.view.Button( view ).render();
 			}

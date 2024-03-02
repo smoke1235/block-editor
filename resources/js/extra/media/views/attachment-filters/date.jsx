@@ -1,4 +1,8 @@
+import _ from "underscore";
 import AttachmentFilters from "../attachment-filters";
+
+import { l10n } from "../../../lang";
+
 
 /**
  * A filter dropdown for month/dates.
@@ -16,7 +20,7 @@ var DateFilter = AttachmentFilters.extend(/** @lends wp.media.view.AttachmentFil
 
 	createFilters: function() {
 		var filters = {};
-		_.each( wp.media.view.settings.months || {}, function( value, index ) {
+		_.each( l10n.settings.months || {}, function( value, index ) {
 			filters[ index ] = {
 				text: value.text,
 				props: {

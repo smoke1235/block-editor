@@ -44,6 +44,7 @@ import * as preferences from '@wordpress/preferences';
 import * as preferencesPersistence from '@wordpress/preferences-persistence';
 import media from "../extra/index";
 import { ajax } from '../extra/util';
+import Uploader from "../uploader/plupload/wp-plupload";
 
 export const imports = {
   a11y,
@@ -91,13 +92,17 @@ export const imports = {
   viewport,
   wordcount,
   media,
-  ajax
+  ajax,
+  Uploader
 }
 
 window.wp = {
   ...(window.wp || {}),
   ...imports
 }
+
+
+
 
 
 export default imports

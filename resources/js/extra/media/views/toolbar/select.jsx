@@ -1,4 +1,6 @@
+import _ from "underscore";
 import Toolbar from "../toolbar";
+import { l10n } from "../../../lang";
 
 /**
  * wp.media.view.Toolbar.Select

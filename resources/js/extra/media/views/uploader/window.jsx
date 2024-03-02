@@ -1,3 +1,5 @@
+import $ from "jquery";
+import _ from "underscore";
 import View from "../view";
 
 import { template as Template } from "../../../util";
@@ -56,8 +58,9 @@ var UploaderWindow = View.extend(/** @lends wp.media.view.UploaderWindow.prototy
 	},
 
 	ready: function() {
-		var postId = wp.media.view.settings.post.id,
-			dropzone;
+		var postId = 1;
+		//var postId = wp.media.view.settings.post.id;
+		var	dropzone;
 
 		// If the uploader already exists, bail.
 		if ( this.uploader ) {

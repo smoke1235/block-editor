@@ -1,4 +1,6 @@
+import _ from "underscore";
 import MediaFrame from "../media-frame";
+import { l10n } from "../../../lang";
 
 
 /**

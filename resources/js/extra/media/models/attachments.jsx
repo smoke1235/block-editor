@@ -24,6 +24,7 @@
  */
 import _ from "underscore";
 import Backbone from "backbone";
+import jQuery from "jquery";
 
 import Attachment from './attachment.jsx';
 
