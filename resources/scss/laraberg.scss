@@ -1,5 +1,8 @@
 @use "sass:math";
 
+
+@import "dashicons.scss";
+
 @import "@wordpress/base-styles/animations";
 @import "@wordpress/base-styles/breakpoints";
 @import "@wordpress/base-styles/colors";
@@ -12,27 +15,22 @@
 @import "@wordpress/components/src/style.scss";
 @import "@wordpress/preferences/src/style.scss";
 @import "@wordpress/block-editor/src/style.scss";
-
 @import "@wordpress/patterns/src/style.scss";
 @import "@wordpress/reusable-blocks/src/style.scss";
-
 @import "@wordpress/editor/src/style.scss";
 @import "@wordpress/block-library/src/reset.scss";
 @import "@wordpress/block-library/src/style.scss";
-
-
 @import "@wordpress/block-editor/src/content.scss";
 @import "@wordpress/block-library/src/editor.scss";
 //@import "@wordpress/block-library/src/theme.scss";
 @import "@wordpress/commands/src/style.scss";
 @import "@wordpress/edit-post/src/style.scss";
-
 @import "@wordpress/block-directory/src/style.scss";
-
 @import "@wordpress/format-library/src/style.scss";
 
 
-
+@import "peter.scss";
+@import "media-views.scss";
 
 
 
@@ -61,76 +59,5 @@ a, div {
 }
 
 
-/*
-$sidebar-width: 300px;
-$border-color: #e0e0e0;
-$test: 1;
 
-.block-editor-container {
-    position: relative;
-    border: solid 1px $border-color;
-    border-radius: 2px;
 
-    input, textarea {
-        box-sizing: border-box;
-    }
-
-    .block-editor {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .block-editor__header {
-        grid-area: header;
-        display: flex;
-        justify-content: space-between;
-        padding: .5rem;
-        border-bottom: solid 1px $border-color;
-    }
-
-    .block-editor__header-toolbar {
-        display: flex;
-    }
-
-    .block-editor__content {
-        display: flex;
-    }
-
-    .block-editor__editor {
-        flex: 1;
-        padding: 1rem;
-        overflow-y: auto;
-    }
-
-    .block-editor__sidebar {
-        flex: 0 0 $sidebar-width;
-        overflow-y: auto;
-        border-left: 1px solid $border-color;
-
-        .components-panel {
-            box-sizing: content-box;
-            height: 100%;
-            position: relative;
-            border: none;
-        }
-    }
-
-    .block-editor-inserter__menu {
-        background-color: #FFFFFF;
-    }
-
-    .block-editor-inserter__popover {
-        .components-popover__content  {
-            background-color: #FFFFFF;
-            max-height: 400px !important;
-        }
-
-        .block-editor-inserter__menu {
-            margin: -12px -8px;
-        }
-    }
-
-    iframe, img {
-        border: none;
-    }
-}*/

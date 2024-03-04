@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
+import { defineConfig, splitVendorChunkPlugin } from 'vite'
 import react from '@vitejs/plugin-react'
-import http from "https";
+
 
 // https://vitejs.dev/config/
 /*export default defineConfig({
@@ -23,7 +23,7 @@ import http from "https";
 
 export default defineConfig({
   root: "./playground",
-  plugins: [react()],
+  plugins: [react(), splitVendorChunkPlugin()],
   loader: { '.js': 'jsx' },
   server: {
     proxy: {

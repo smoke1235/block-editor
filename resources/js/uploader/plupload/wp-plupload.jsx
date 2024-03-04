@@ -3,7 +3,7 @@
 import $ from "jquery";
 import _ from "underscore";
 import Backbone from "backbone";
-//import plupload from "plupload";
+import plupload from "plupload";
 
 import Attachments from "../../extra/media/models/attachments";
 import { l10n } from "../../extra/lang";
@@ -98,13 +98,9 @@ var Uploader = function( options ) {
 		return;
 	}
 
-	this.plupload.config = {
-		connectorPath : "https://bh.smokenetwork.nl/myck/connector.php"
-	};
-	this.plupload.configPath = "https://bh.smokenetwork.nl/myck/connector.php";
+	
 	// Initialize the plupload instance.
-	//this.uploader = new plupload.Uploader( this.plupload );
-	this.uploader = new CKFinder.start( this.plupload );
+	this.uploader = new plupload.Uploader( this.plupload );
 	delete this.plupload;
 
 	// Set default params and remove this.params alias.

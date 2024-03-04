@@ -1,5 +1,10 @@
-import "../scss/laraberg.scss"
-import "../scss/extra.scss"
+
+import "../scss/dashicons.scss";
+//import "../scss/laraberg.scss"
+//import "../scss/extra.scss"
+//import "../scss/peter.scss"
+//import "../scss/media-views.scss";
+
 
 
 import './lib/env'
