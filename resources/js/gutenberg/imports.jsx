@@ -45,6 +45,7 @@ import * as preferencesPersistence from '@wordpress/preferences-persistence';
 import media from "../extra/index";
 import { ajax } from '../extra/util';
 import Uploader from "../uploader/plupload/wp-plupload";
+//import Uploader from "../uploader/ckfinder/wp-ckfinder";
 
 export const imports = {
   a11y,
