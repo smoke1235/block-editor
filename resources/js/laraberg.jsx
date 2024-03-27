@@ -142,14 +142,14 @@ async function init(target, type , pageID, settings) {
 
 
 
-export const Laraberg = {
+export const BlockEditor = {
 	init:init,
-    wordpress: wp
+  wordpress: wp
 }
 
 
 
-window.Laraberg = Laraberg
+window.BlockEditor = BlockEditor;
 
-export default Laraberg
+export default BlockEditor
 

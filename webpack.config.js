@@ -11,7 +11,7 @@ const externals = {
 
 module.exports = {
 	mode: process.env.NODE_ENV,
-	entry: './resources/js/laraberg.jsx',
+	entry: ['./resources/js/laraberg.jsx', './resources/scss/laraberg.scss'],
 	output: {
 		filename: 'laraberg.js',
 		path: path.resolve(__dirname, 'public/js'),
@@ -22,7 +22,7 @@ module.exports = {
   	devtool: 'source-map',
   	externals: externals,
 	resolve: {
-		extensions: ['*', '.js', '.jsx'],
+		extensions: ['*', '.js', '.jsx', '.scss'],
 	}, 
   	//resolve: {
     //	extensions: [".jsx", ".js", ".scss", ".css"],
@@ -49,7 +49,7 @@ module.exports = {
           		MiniCssExtractPlugin.loader,
 
           		// Creates `style` nodes from JS strings
-          		"style-loader",
+          		//"style-loader",
           		// Translates CSS into CommonJS
           		"css-loader",
           		// Compiles Sass to CSS
@@ -82,7 +82,7 @@ module.exports = {
       		// Options similar to the same options in webpackOptions.output
       		// both options are optional
       		//filename: "[name].css",
-			filename: '../css/[name].css',
+			filename: '[name].css',
     	}),
   	]
 }
