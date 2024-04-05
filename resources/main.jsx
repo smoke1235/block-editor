@@ -3,7 +3,7 @@ import "../resources/scss/laraberg.scss"
 import "../resources/scss/extra.scss"
 import "../resources/scss/peter.scss"
 import "../resources/scss/media-views.scss";
-import {Laraberg as BlockEditor} from "../resources/js/laraberg"
+import BlockEditor from "../resources/js/laraberg"
 
 
 
@@ -756,4 +756,3 @@ const settings =
 
 
 init("contentEditor", "page", 1, settings);
-

@@ -47,6 +47,8 @@ import { ajax } from '../extra/util';
 import Uploader from "../uploader/plupload/wp-plupload";
 //import Uploader from "../uploader/ckfinder/wp-ckfinder";
 
+import * as editSite from "@wordpress/edit-site";
+
 export const imports = {
   a11y,
   annotations,
@@ -68,6 +70,7 @@ export const imports = {
   dom,
   domReady,
   editPost,
+  editSite,
   editor,
   element,
   escapeHtml,

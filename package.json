@@ -6,10 +6,11 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress --stats-error-details --config webpack.config.js",
     "start": "vite playground",
-    "dev": "vite --host",
+    "dev": "vite",
     "build:clean": "rimraf ./packages/*",
     "build:packages": "node ./bin/packages/build.js",
-    "build:css": "npm run build:clean && npm run build:packages"
+    "build:css": "npm run build:clean && npm run build:packages",
+    "testserver": "node ./bin/testserver.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-standard": "^4.1.0",
+    "express": "^4.19.2",
     "fast-glob": "^3.3.2",
     "file-loader": "^6.2.0",
     "glob": "^10.3.10",

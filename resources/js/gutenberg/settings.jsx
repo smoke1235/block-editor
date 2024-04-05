@@ -1,5 +1,6 @@
 
 import apiFetch from '../api/api-fetch'
+import myApiFetch from '../api/myapi-fetch'
 
 window.userSettings = {
   secure: '',
@@ -9,7 +10,7 @@ window.userSettings = {
 
 // set your root path
 window.wpApiSettings = {
-  root: window.location.origin + '/',
+  root: window.location.origin + '/wp-json/',
   nonce: '1234567890',
   versionString: 'wp/v2'
 }
@@ -29,8 +30,8 @@ const {
   setFetchHandler
 } = window.wp.apiFetch
 
-use(createRootURLMiddleware(window.wpApiSettings.root))
-setFetchHandler(apiFetch)
+//use(createRootURLMiddleware(window.wpApiSettings.root))
+//wp.apiFetch.use(myApiFetch)
 
 // Some editor settings
 export const editorSettings = {

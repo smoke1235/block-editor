@@ -3,6 +3,8 @@ import axios from 'axios'
 import { editorSettings } from '../gutenberg/settings'
 import * as Notices from '../lib/notices'
 
+axios.defaults.baseURL = `http://localhost:5173/`
+
 let routePrefix = "laraberg";
 let searchCb
 
@@ -189,8 +191,14 @@ const requests = {
 	method: 'GET',
     regex: /\/wp\/v2\/taxonomies\/category/g,
     run: getTaxonomiesCategory
-  }
+  },
 
+  getGlobalStylesThemeTemplateVariations: {
+    method: 'GET',
+    regex: /\/wp\/v2\/global-styles\/themes\/twentytwentyfour\/variations/g,
+    run: getGlobalStylesThemeTemplateVariations
+
+  }
 
   
 
@@ -199,17 +207,23 @@ const requests = {
  
 }
 
+
+async function getGlobalStylesThemeTemplateVariations() {
+  return [];
+}
+
+
 async function getMedia() {
   
 }
 
 
 async function getTaxonomiesCategory() {
-	return MockData.taxonomiesCategory;
+	//return MockData.taxonomiesCategory;
 }
 
 async function getTaxonomiesPostTag() {
-	return MockData.taxonomiesPostTag;
+	//return MockData.taxonomiesPostTag;
 }
 
 
@@ -271,11 +285,11 @@ async function PostPage(options, matches) {
 	// TODO::Make AJAX
 	const response = await axios.post(`/${routePrefix}/postPage/`, matches)
 	return response
-	return false;
+	//return false;
 }
 
 async function fields() {
-  return MockData.fields;
+  //return MockData.fields;
 }
 
 async function usersView() {
@@ -285,11 +299,13 @@ async function usersView() {
 async function blockPatterns() {
 	const response = await axios.get(`/${routePrefix}/block-patterns/patterns/`);
 	return response.data;
+  //return MockData.blockPatterns;
 }
 
 
 async function blockPatternsCategories() {
-	const response = await axios.get(`/${routePrefix}/block-patterns/categories/`);
+	//return MockData.blockPatternsCategories;
+  const response = await axios.get(`/${routePrefix}/block-patterns/categories/`);
 	return response.data;
 }
 
@@ -491,9 +507,10 @@ async function getTaxonomies (options, matches) {
  * Mock themes request
  */
 async function getThemes () {
-	const response = await axios.get(`/${routePrefix}/themes/`)
+  
+	const response = await axios.get(`/${routePrefix}/themes`)
   	return response.data
-  return MockData.themes
+  //return MockData.themes
 }
 
 /**
@@ -558,6 +575,7 @@ function matchPath (options) {
 				((options.method && options.method === requestPath.method) ||
 				  requestPath.method === 'GET')
 			  ) {
+          console.log(requestPath.regex);
 				promise = requestPath.run(matches, options.data, options.body);
 			  }
 		}
@@ -585,6 +603,7 @@ export default function apiFetch (options) {
   return result.then(res => {
     return res
   }).catch(error => {
+    console.log(`${error.message} - ${error.data.data.path}`);
     Notices.error(`${error.message} - ${error.data.data.path}`)
   })
 }

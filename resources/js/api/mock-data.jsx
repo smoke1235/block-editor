@@ -49,66 +49,1149 @@ export const page = {
   }
 }
 
-export const themes = [{
-  theme_supports: {
-    formats: [
-      'standard',
-      'aside',
-      'image',
-      'video',
-      'quote',
-      'link',
-      'gallery',
-      'audio'
-    ],
-    'post-thumbnails': true,
-    'responsive-embeds': true
-  }
-}]
+export const themes = [
+    {
+        "stylesheet": "twentytwentyfour",
+        "template": "twentytwentyfour",
+        "requires_php": "7.0",
+        "requires_wp": "6.4",
+        "textdomain": "twentytwentyfour",
+        "version": "1.0",
+        "screenshot": "",
+        "author": {
+            "raw": "the WordPress team",
+            "rendered": ""
+        },
+        "author_uri": {
+            "raw": "",
+            "rendered": ""
+        },
+        "description": {
+            "raw": "Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.",
+            "rendered": "Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4."
+        },
+        "name": {
+            "raw": "Twenty Twenty-Four",
+            "rendered": "Twenty Twenty-Four"
+        },
+        "tags": {
+            "raw": [
+                "one-column",
+                "custom-colors",
+                "custom-menu",
+                "custom-logo",
+                "editor-style",
+                "featured-images",
+                "full-site-editing",
+                "block-patterns",
+                "rtl-language-support",
+                "sticky-post",
+                "threaded-comments",
+                "translation-ready",
+                "wide-blocks",
+                "block-styles",
+                "style-variations",
+                "accessibility-ready",
+                "blog",
+                "portfolio",
+                "news"
+            ],
+            "rendered": "one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news"
+        },
+        "theme_uri": {
+            "raw": "",
+            "rendered": ""
+        },
+        "status": "active",
+        "theme_supports": {
+            "align-wide": false,
+            "automatic-feed-links": true,
+            "block-templates": true,
+            "block-template-parts": false,
+            "custom-background": false,
+            "custom-header": false,
+            "custom-logo": false,
+            "customize-selective-refresh-widgets": false,
+            "dark-editor-style": false,
+            "disable-custom-colors": false,
+            "disable-custom-font-sizes": false,
+            "disable-custom-gradients": false,
+            "disable-layout-styles": false,
+            "editor-color-palette": false,
+            "editor-font-sizes": false,
+            "editor-gradient-presets": false,
+            "editor-styles": true,
+            "html5": [
+                "comment-form",
+                "comment-list",
+                "search-form",
+                "gallery",
+                "caption",
+                "style",
+                "script"
+            ],
+            "formats": [
+                "standard"
+            ],
+            "post-thumbnails": true,
+            "responsive-embeds": true,
+            "title-tag": false,
+            "wp-block-styles": false
+        },
+        "is_block_theme": true,
+        
+    }
+]
 
 export const types = {
-  page: {
-    id: 1,
-    labels: {
-      singular_name: 'Page'
+    "post": {
+        "capabilities": {
+            "edit_post": "edit_post",
+            "read_post": "read_post",
+            "delete_post": "delete_post",
+            "edit_posts": "edit_posts",
+            "edit_others_posts": "edit_others_posts",
+            "delete_posts": "delete_posts",
+            "publish_posts": "publish_posts",
+            "read_private_posts": "read_private_posts",
+            "read": "read",
+            "delete_private_posts": "delete_private_posts",
+            "delete_published_posts": "delete_published_posts",
+            "delete_others_posts": "delete_others_posts",
+            "edit_private_posts": "edit_private_posts",
+            "edit_published_posts": "edit_published_posts",
+            "create_posts": "edit_posts"
+        },
+        "description": "",
+        "hierarchical": false,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": true,
+            "show_ui": true
+        },
+        "viewable": true,
+        "labels": {
+            "name": "Posts",
+            "singular_name": "Post",
+            "add_new": "Add New Post",
+            "add_new_item": "Add New Post",
+            "edit_item": "Edit Post",
+            "new_item": "New Post",
+            "view_item": "View Post",
+            "view_items": "View Posts",
+            "search_items": "Search Posts",
+            "not_found": "No posts found.",
+            "not_found_in_trash": "No posts found in Trash.",
+            "parent_item_colon": null,
+            "all_items": "All Posts",
+            "archives": "Post Archives",
+            "attributes": "Post Attributes",
+            "insert_into_item": "Insert into post",
+            "uploaded_to_this_item": "Uploaded to this post",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter posts list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Posts list navigation",
+            "items_list": "Posts list",
+            "item_published": "Post published.",
+            "item_published_privately": "Post published privately.",
+            "item_reverted_to_draft": "Post reverted to draft.",
+            "item_trashed": "Post trashed.",
+            "item_scheduled": "Post scheduled.",
+            "item_updated": "Post updated.",
+            "item_link": "Post Link",
+            "item_link_description": "A link to a post.",
+            "menu_name": "Posts",
+            "name_admin_bar": "Post"
+        },
+        "name": "Posts",
+        "slug": "post",
+        "icon": "dashicons-admin-post",
+        "supports": {
+            "title": true,
+            "editor": true,
+            "author": true,
+            "thumbnail": true,
+            "excerpt": true,
+            "trackbacks": true,
+            "custom-fields": true,
+            "comments": true,
+            "revisions": true,
+            "post-formats": true
+        },
+        "taxonomies": [
+            "category",
+            "post_tag"
+        ],
+        "rest_base": "posts",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v22.4 - https:\/\/yoast.com\/wordpress\/plugins\/seo\/ -->\n<title>Test -<\/title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"noindex, follow\" \/>\n<meta property=\"og:locale\" content=\"en_US\" \/>\n<meta property=\"og:type\" content=\"website\" \/>\n<meta property=\"og:title\" content=\"Test\" \/>\n<meta property=\"og:url\" content=\"https:\/\/wp.smokenetwork.nl\/\" \/>\n<meta property=\"og:site_name\" content=\"Test\" \/>\n<meta name=\"twitter:card\" content=\"summary_large_image\" \/>\n<script type=\"application\/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\/\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\/\/wp.smokenetwork.nl\/\",\"url\":\"https:\/\/wp.smokenetwork.nl\/\",\"name\":\"Test -\",\"isPartOf\":{\"@id\":\"https:\/\/wp.smokenetwork.nl\/#website\"},\"breadcrumb\":{\"@id\":\"https:\/\/wp.smokenetwork.nl\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\/\/wp.smokenetwork.nl\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\/\/wp.smokenetwork.nl\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Home\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\/\/wp.smokenetwork.nl\/#website\",\"url\":\"https:\/\/wp.smokenetwork.nl\/\",\"name\":\"Test\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\/\/wp.smokenetwork.nl\/?s={search_term_string}\"},\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"en-US\"}]}<\/script>\n<!-- \/ Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Test -",
+            "robots": {
+                "index": "noindex",
+                "follow": "follow"
+            },
+            "og_locale": "en_US",
+            "og_type": "website",
+            "og_title": "Test",
+            "og_url": "https:\/\/wp.smokenetwork.nl\/",
+            "og_site_name": "Test",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https:\/\/schema.org",
+                "@graph": [
+                    {
+                        "@type": "CollectionPage",
+                        "@id": "https:\/\/wp.smokenetwork.nl\/",
+                        "url": "https:\/\/wp.smokenetwork.nl\/",
+                        "name": "Test -",
+                        "isPartOf": {
+                            "@id": "https:\/\/wp.smokenetwork.nl\/#website"
+                        },
+                        "breadcrumb": {
+                            "@id": "https:\/\/wp.smokenetwork.nl\/#breadcrumb"
+                        },
+                        "inLanguage": "en-US"
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https:\/\/wp.smokenetwork.nl\/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https:\/\/wp.smokenetwork.nl\/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Home"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https:\/\/wp.smokenetwork.nl\/#website",
+                        "url": "https:\/\/wp.smokenetwork.nl\/",
+                        "name": "Test",
+                        "description": "",
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https:\/\/wp.smokenetwork.nl\/?s={search_term_string}"
+                                },
+                                "query-input": "required name=search_term_string"
+                            }
+                        ],
+                        "inLanguage": "en-US"
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/posts"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
     },
-    name: 'Page',
-    rest_base: 'pages',
-    slug: 'page',
-    supports: {
-      author: false,
-      comments: false, // hide discussion-panel
-      'custom-fields': true,
-      editor: true,
-      excerpt: false,
-      discussion: false,
-      'page-attributes': false, // hide page-attributes panel
-      revisions: false,
-      thumbnail: false, // featured-image panel
-      title: false // show title on editor
+    "page": {
+        "capabilities": {
+            "edit_post": "edit_page",
+            "read_post": "read_page",
+            "delete_post": "delete_page",
+            "edit_posts": "edit_pages",
+            "edit_others_posts": "edit_others_pages",
+            "delete_posts": "delete_pages",
+            "publish_posts": "publish_pages",
+            "read_private_posts": "read_private_pages",
+            "read": "read",
+            "delete_private_posts": "delete_private_pages",
+            "delete_published_posts": "delete_published_pages",
+            "delete_others_posts": "delete_others_pages",
+            "edit_private_posts": "edit_private_pages",
+            "edit_published_posts": "edit_published_pages",
+            "create_posts": "edit_pages"
+        },
+        "description": "",
+        "hierarchical": true,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": true,
+            "show_ui": true
+        },
+        "viewable": true,
+        "labels": {
+            "name": "Pages",
+            "singular_name": "Page",
+            "add_new": "Add New Page",
+            "add_new_item": "Add New Page",
+            "edit_item": "Edit Page",
+            "new_item": "New Page",
+            "view_item": "View Page",
+            "view_items": "View Pages",
+            "search_items": "Search Pages",
+            "not_found": "No pages found.",
+            "not_found_in_trash": "No pages found in Trash.",
+            "parent_item_colon": "Parent Page:",
+            "all_items": "All Pages",
+            "archives": "Page Archives",
+            "attributes": "Page Attributes",
+            "insert_into_item": "Insert into page",
+            "uploaded_to_this_item": "Uploaded to this page",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter pages list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Pages list navigation",
+            "items_list": "Pages list",
+            "item_published": "Page published.",
+            "item_published_privately": "Page published privately.",
+            "item_reverted_to_draft": "Page reverted to draft.",
+            "item_trashed": "Page trashed.",
+            "item_scheduled": "Page scheduled.",
+            "item_updated": "Page updated.",
+            "item_link": "Page Link",
+            "item_link_description": "A link to a page.",
+            "menu_name": "Pages",
+            "name_admin_bar": "Page"
+        },
+        "name": "Pages",
+        "slug": "page",
+        "icon": "dashicons-admin-page",
+        "supports": {
+            "title": true,
+            "editor": true,
+            "author": true,
+            "thumbnail": true,
+            "page-attributes": true,
+            "custom-fields": true,
+            "comments": true,
+            "revisions": true
+        },
+        "taxonomies": [],
+        "rest_base": "pages",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": null,
+        "yoast_head_json": null,
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/pages"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
     },
-    taxonomies: [],
-    viewable: false,
-    saveable: false,
-    publishable: false,
-    autosaveable: false
-  },
-  block: {
-    capabilities: {},
-    labels: {
-      singular_name: 'Block'
+    "attachment": {
+        "capabilities": {
+            "edit_post": "edit_post",
+            "read_post": "read_post",
+            "delete_post": "delete_post",
+            "edit_posts": "edit_posts",
+            "edit_others_posts": "edit_others_posts",
+            "delete_posts": "delete_posts",
+            "publish_posts": "publish_posts",
+            "read_private_posts": "read_private_posts",
+            "read": "read",
+            "delete_private_posts": "delete_private_posts",
+            "delete_published_posts": "delete_published_posts",
+            "delete_others_posts": "delete_others_posts",
+            "edit_private_posts": "edit_private_posts",
+            "edit_published_posts": "edit_published_posts",
+            "create_posts": "upload_files"
+        },
+        "description": "",
+        "hierarchical": false,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": false,
+            "show_ui": true
+        },
+        "viewable": true,
+        "labels": {
+            "name": "Media",
+            "singular_name": "Media",
+            "add_new": "Add New Media File",
+            "add_new_item": "Add New Post",
+            "edit_item": "Edit Media",
+            "new_item": "New Post",
+            "view_item": "View Attachment Page",
+            "view_items": "View Posts",
+            "search_items": "Search Posts",
+            "not_found": "No posts found.",
+            "not_found_in_trash": "No posts found in Trash.",
+            "parent_item_colon": null,
+            "all_items": "Media",
+            "archives": "Media",
+            "attributes": "Attachment Attributes",
+            "insert_into_item": "Insert into post",
+            "uploaded_to_this_item": "Uploaded to this post",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter posts list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Posts list navigation",
+            "items_list": "Posts list",
+            "item_published": "Post published.",
+            "item_published_privately": "Post published privately.",
+            "item_reverted_to_draft": "Post reverted to draft.",
+            "item_trashed": "Post trashed.",
+            "item_scheduled": "Post scheduled.",
+            "item_updated": "Post updated.",
+            "item_link": "Post Link",
+            "item_link_description": "A link to a post.",
+            "menu_name": "Media",
+            "name_admin_bar": "Media"
+        },
+        "name": "Media",
+        "slug": "attachment",
+        "icon": "dashicons-admin-media",
+        "supports": {
+            "title": true,
+            "author": true,
+            "comments": true
+        },
+        "taxonomies": [],
+        "rest_base": "media",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": null,
+        "yoast_head_json": null,
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/media"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
     },
-    name: 'Blocks',
-    rest_base: 'blocks',
-    slug: 'wp_block',
-    description: '',
-    hierarchical: false,
-    supports: {
-      title: true,
-      editor: true
+    "nav_menu_item": {
+        "capabilities": {
+            "edit_post": "edit_post",
+            "read_post": "read_post",
+            "delete_post": "delete_post",
+            "edit_posts": "edit_theme_options",
+            "edit_others_posts": "edit_theme_options",
+            "delete_posts": "edit_theme_options",
+            "publish_posts": "edit_theme_options",
+            "read_private_posts": "edit_theme_options",
+            "read": "read",
+            "delete_private_posts": "edit_theme_options",
+            "delete_published_posts": "edit_theme_options",
+            "delete_others_posts": "edit_theme_options",
+            "edit_private_posts": "edit_theme_options",
+            "edit_published_posts": "edit_theme_options",
+            "create_posts": "edit_theme_options"
+        },
+        "description": "",
+        "hierarchical": false,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": false,
+            "show_ui": false
+        },
+        "viewable": false,
+        "labels": {
+            "name": "Navigation Menu Items",
+            "singular_name": "Navigation Menu Item",
+            "add_new": "Add New Post",
+            "add_new_item": "Add New Post",
+            "edit_item": "Edit Post",
+            "new_item": "New Post",
+            "view_item": "View Post",
+            "view_items": "View Posts",
+            "search_items": "Search Posts",
+            "not_found": "No posts found.",
+            "not_found_in_trash": "No posts found in Trash.",
+            "parent_item_colon": null,
+            "all_items": "Navigation Menu Items",
+            "archives": "Navigation Menu Items",
+            "attributes": "Post Attributes",
+            "insert_into_item": "Insert into post",
+            "uploaded_to_this_item": "Uploaded to this post",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter posts list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Posts list navigation",
+            "items_list": "Posts list",
+            "item_published": "Post published.",
+            "item_published_privately": "Post published privately.",
+            "item_reverted_to_draft": "Post reverted to draft.",
+            "item_trashed": "Post trashed.",
+            "item_scheduled": "Post scheduled.",
+            "item_updated": "Post updated.",
+            "item_link": "Post Link",
+            "item_link_description": "A link to a post.",
+            "menu_name": "Navigation Menu Items",
+            "name_admin_bar": "Navigation Menu Item"
+        },
+        "name": "Navigation Menu Items",
+        "slug": "nav_menu_item",
+        "icon": null,
+        "supports": {
+            "title": true,
+            "editor": true
+        },
+        "taxonomies": [
+            "nav_menu"
+        ],
+        "rest_base": "menu-items",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": null,
+        "yoast_head_json": null,
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/menu-items"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
     },
-    viewable: true
-  }
+    "wp_block": {
+        "capabilities": {
+            "edit_post": "edit_block",
+            "read_post": "read_block",
+            "delete_post": "delete_block",
+            "edit_posts": "edit_posts",
+            "edit_others_posts": "edit_others_posts",
+            "delete_posts": "delete_posts",
+            "publish_posts": "publish_blocks",
+            "read_private_posts": "read_private_blocks",
+            "read": "edit_posts",
+            "delete_private_posts": "delete_private_blocks",
+            "delete_published_posts": "delete_published_posts",
+            "delete_others_posts": "delete_others_posts",
+            "edit_private_posts": "edit_private_blocks",
+            "edit_published_posts": "edit_published_posts",
+            "create_posts": "publish_posts"
+        },
+        "description": "",
+        "hierarchical": false,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": false,
+            "show_ui": true
+        },
+        "viewable": false,
+        "labels": {
+            "name": "Patterns",
+            "singular_name": "Pattern",
+            "add_new": "Add New Pattern",
+            "add_new_item": "Add New Pattern",
+            "edit_item": "Edit Block Pattern",
+            "new_item": "New Pattern",
+            "view_item": "View Pattern",
+            "view_items": "View Patterns",
+            "search_items": "Search Patterns",
+            "not_found": "No patterns found.",
+            "not_found_in_trash": "No patterns found in Trash.",
+            "parent_item_colon": null,
+            "all_items": "All Patterns",
+            "archives": "All Patterns",
+            "attributes": "Post Attributes",
+            "insert_into_item": "Insert into post",
+            "uploaded_to_this_item": "Uploaded to this post",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter patterns list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Patterns list navigation",
+            "items_list": "Patterns list",
+            "item_published": "Pattern published.",
+            "item_published_privately": "Pattern published privately.",
+            "item_reverted_to_draft": "Pattern reverted to draft.",
+            "item_trashed": "Post trashed.",
+            "item_scheduled": "Pattern scheduled.",
+            "item_updated": "Pattern updated.",
+            "item_link": "Post Link",
+            "item_link_description": "A link to a post.",
+            "menu_name": "Patterns",
+            "name_admin_bar": "Pattern"
+        },
+        "name": "Patterns",
+        "slug": "wp_block",
+        "icon": null,
+        "supports": {
+            "title": true,
+            "editor": true,
+            "revisions": true,
+            "custom-fields": true
+        },
+        "taxonomies": [
+            "wp_pattern_category"
+        ],
+        "rest_base": "blocks",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": null,
+        "yoast_head_json": null,
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/blocks"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    "wp_template": {
+        "capabilities": {
+            "edit_post": "edit_template",
+            "read_post": "read_template",
+            "delete_post": "delete_template",
+            "edit_posts": "edit_theme_options",
+            "edit_others_posts": "edit_theme_options",
+            "delete_posts": "edit_theme_options",
+            "publish_posts": "edit_theme_options",
+            "read_private_posts": "edit_theme_options",
+            "read": "edit_theme_options",
+            "delete_private_posts": "edit_theme_options",
+            "delete_published_posts": "edit_theme_options",
+            "delete_others_posts": "edit_theme_options",
+            "edit_private_posts": "edit_theme_options",
+            "edit_published_posts": "edit_theme_options",
+            "create_posts": "edit_theme_options"
+        },
+        "description": "Templates to include in your theme.",
+        "hierarchical": false,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": false,
+            "show_ui": false
+        },
+        "viewable": false,
+        "labels": {
+            "name": "Templates",
+            "singular_name": "Template",
+            "add_new": "Add New Template",
+            "add_new_item": "Add New Template",
+            "edit_item": "Edit Template",
+            "new_item": "New Template",
+            "view_item": "View Template",
+            "view_items": "View Posts",
+            "search_items": "Search Templates",
+            "not_found": "No templates found.",
+            "not_found_in_trash": "No templates found in Trash.",
+            "parent_item_colon": "Parent Template:",
+            "all_items": "Templates",
+            "archives": "Template archives",
+            "attributes": "Post Attributes",
+            "insert_into_item": "Insert into template",
+            "uploaded_to_this_item": "Uploaded to this template",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter templates list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Templates list navigation",
+            "items_list": "Templates list",
+            "item_published": "Post published.",
+            "item_published_privately": "Post published privately.",
+            "item_reverted_to_draft": "Post reverted to draft.",
+            "item_trashed": "Post trashed.",
+            "item_scheduled": "Post scheduled.",
+            "item_updated": "Post updated.",
+            "item_link": "Post Link",
+            "item_link_description": "A link to a post.",
+            "menu_name": "Templates",
+            "name_admin_bar": "Template"
+        },
+        "name": "Templates",
+        "slug": "wp_template",
+        "icon": null,
+        "supports": {
+            "title": true,
+            "slug": true,
+            "excerpt": true,
+            "editor": true,
+            "revisions": true,
+            "author": true
+        },
+        "taxonomies": [],
+        "rest_base": "templates",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": null,
+        "yoast_head_json": null,
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/templates"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    "wp_template_part": {
+        "capabilities": {
+            "edit_post": "edit_post",
+            "read_post": "read_post",
+            "delete_post": "delete_post",
+            "edit_posts": "edit_theme_options",
+            "edit_others_posts": "edit_theme_options",
+            "delete_posts": "edit_theme_options",
+            "publish_posts": "edit_theme_options",
+            "read_private_posts": "edit_theme_options",
+            "read": "edit_theme_options",
+            "delete_private_posts": "edit_theme_options",
+            "delete_published_posts": "edit_theme_options",
+            "delete_others_posts": "edit_theme_options",
+            "edit_private_posts": "edit_theme_options",
+            "edit_published_posts": "edit_theme_options",
+            "create_posts": "edit_theme_options"
+        },
+        "description": "Template parts to include in your templates.",
+        "hierarchical": false,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": false,
+            "show_ui": false
+        },
+        "viewable": false,
+        "labels": {
+            "name": "Template Parts",
+            "singular_name": "Template Part",
+            "add_new": "Add New Template Part",
+            "add_new_item": "Add New Template Part",
+            "edit_item": "Edit Template Part",
+            "new_item": "New Template Part",
+            "view_item": "View Template Part",
+            "view_items": "View Posts",
+            "search_items": "Search Template Parts",
+            "not_found": "No template parts found.",
+            "not_found_in_trash": "No template parts found in Trash.",
+            "parent_item_colon": "Parent Template Part:",
+            "all_items": "Template Parts",
+            "archives": "Template part archives",
+            "attributes": "Post Attributes",
+            "insert_into_item": "Insert into template part",
+            "uploaded_to_this_item": "Uploaded to this template part",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter template parts list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Template parts list navigation",
+            "items_list": "Template parts list",
+            "item_published": "Post published.",
+            "item_published_privately": "Post published privately.",
+            "item_reverted_to_draft": "Post reverted to draft.",
+            "item_trashed": "Post trashed.",
+            "item_scheduled": "Post scheduled.",
+            "item_updated": "Post updated.",
+            "item_link": "Post Link",
+            "item_link_description": "A link to a post.",
+            "menu_name": "Template Parts",
+            "name_admin_bar": "Template Part"
+        },
+        "name": "Template Parts",
+        "slug": "wp_template_part",
+        "icon": null,
+        "supports": {
+            "title": true,
+            "slug": true,
+            "excerpt": true,
+            "editor": true,
+            "revisions": true,
+            "author": true
+        },
+        "taxonomies": [],
+        "rest_base": "template-parts",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": null,
+        "yoast_head_json": null,
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/template-parts"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    "wp_navigation": {
+        "capabilities": {
+            "edit_post": "edit_post",
+            "read_post": "read_post",
+            "delete_post": "delete_post",
+            "edit_posts": "edit_theme_options",
+            "edit_others_posts": "edit_theme_options",
+            "delete_posts": "edit_theme_options",
+            "publish_posts": "edit_theme_options",
+            "read_private_posts": "edit_theme_options",
+            "read": "read",
+            "delete_private_posts": "edit_theme_options",
+            "delete_published_posts": "edit_theme_options",
+            "delete_others_posts": "edit_theme_options",
+            "edit_private_posts": "edit_theme_options",
+            "edit_published_posts": "edit_theme_options",
+            "create_posts": "edit_theme_options"
+        },
+        "description": "Navigation menus that can be inserted into your site.",
+        "hierarchical": false,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": false,
+            "show_ui": true
+        },
+        "viewable": false,
+        "labels": {
+            "name": "Navigation Menus",
+            "singular_name": "Navigation Menu",
+            "add_new": "Add New Navigation Menu",
+            "add_new_item": "Add New Navigation Menu",
+            "edit_item": "Edit Navigation Menu",
+            "new_item": "New Navigation Menu",
+            "view_item": "View Navigation Menu",
+            "view_items": "View Posts",
+            "search_items": "Search Navigation Menus",
+            "not_found": "No Navigation Menu found.",
+            "not_found_in_trash": "No Navigation Menu found in Trash.",
+            "parent_item_colon": "Parent Navigation Menu:",
+            "all_items": "Navigation Menus",
+            "archives": "Navigation Menu archives",
+            "attributes": "Post Attributes",
+            "insert_into_item": "Insert into Navigation Menu",
+            "uploaded_to_this_item": "Uploaded to this Navigation Menu",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter Navigation Menu list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Navigation Menus list navigation",
+            "items_list": "Navigation Menus list",
+            "item_published": "Post published.",
+            "item_published_privately": "Post published privately.",
+            "item_reverted_to_draft": "Post reverted to draft.",
+            "item_trashed": "Post trashed.",
+            "item_scheduled": "Post scheduled.",
+            "item_updated": "Post updated.",
+            "item_link": "Post Link",
+            "item_link_description": "A link to a post.",
+            "menu_name": "Navigation Menus",
+            "name_admin_bar": "Navigation Menu"
+        },
+        "name": "Navigation Menus",
+        "slug": "wp_navigation",
+        "icon": null,
+        "supports": {
+            "title": true,
+            "editor": true,
+            "revisions": true
+        },
+        "taxonomies": [],
+        "rest_base": "navigation",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": null,
+        "yoast_head_json": null,
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/navigation"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    "wp_font_family": {
+        "capabilities": {
+            "edit_post": "edit_post",
+            "read_post": "read_post",
+            "delete_post": "delete_post",
+            "edit_posts": "edit_theme_options",
+            "edit_others_posts": "edit_theme_options",
+            "delete_posts": "edit_theme_options",
+            "publish_posts": "edit_theme_options",
+            "read_private_posts": "edit_theme_options",
+            "read": "edit_theme_options",
+            "delete_private_posts": "delete_private_posts",
+            "delete_published_posts": "edit_theme_options",
+            "delete_others_posts": "edit_theme_options",
+            "edit_private_posts": "edit_private_posts",
+            "edit_published_posts": "edit_theme_options",
+            "create_posts": "edit_theme_options"
+        },
+        "description": "",
+        "hierarchical": false,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": false,
+            "show_ui": false
+        },
+        "viewable": false,
+        "labels": {
+            "name": "Font Families",
+            "singular_name": "Font Family",
+            "add_new": "Add New Post",
+            "add_new_item": "Add New Post",
+            "edit_item": "Edit Post",
+            "new_item": "New Post",
+            "view_item": "View Post",
+            "view_items": "View Posts",
+            "search_items": "Search Posts",
+            "not_found": "No posts found.",
+            "not_found_in_trash": "No posts found in Trash.",
+            "parent_item_colon": null,
+            "all_items": "Font Families",
+            "archives": "Font Families",
+            "attributes": "Post Attributes",
+            "insert_into_item": "Insert into post",
+            "uploaded_to_this_item": "Uploaded to this post",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter posts list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Posts list navigation",
+            "items_list": "Posts list",
+            "item_published": "Post published.",
+            "item_published_privately": "Post published privately.",
+            "item_reverted_to_draft": "Post reverted to draft.",
+            "item_trashed": "Post trashed.",
+            "item_scheduled": "Post scheduled.",
+            "item_updated": "Post updated.",
+            "item_link": "Post Link",
+            "item_link_description": "A link to a post.",
+            "menu_name": "Font Families",
+            "name_admin_bar": "Font Family"
+        },
+        "name": "Font Families",
+        "slug": "wp_font_family",
+        "icon": null,
+        "supports": {
+            "title": true,
+            "editor": true
+        },
+        "taxonomies": [],
+        "rest_base": "font-families",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": null,
+        "yoast_head_json": null,
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/font-families"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    "wp_font_face": {
+        "capabilities": {
+            "edit_post": "edit_post",
+            "read_post": "read_post",
+            "delete_post": "delete_post",
+            "edit_posts": "edit_theme_options",
+            "edit_others_posts": "edit_theme_options",
+            "delete_posts": "edit_theme_options",
+            "publish_posts": "edit_theme_options",
+            "read_private_posts": "edit_theme_options",
+            "read": "edit_theme_options",
+            "delete_private_posts": "delete_private_posts",
+            "delete_published_posts": "edit_theme_options",
+            "delete_others_posts": "edit_theme_options",
+            "edit_private_posts": "edit_private_posts",
+            "edit_published_posts": "edit_theme_options",
+            "create_posts": "edit_theme_options"
+        },
+        "description": "",
+        "hierarchical": false,
+        "has_archive": false,
+        "visibility": {
+            "show_in_nav_menus": false,
+            "show_ui": false
+        },
+        "viewable": false,
+        "labels": {
+            "name": "Font Faces",
+            "singular_name": "Font Face",
+            "add_new": "Add New Post",
+            "add_new_item": "Add New Post",
+            "edit_item": "Edit Post",
+            "new_item": "New Post",
+            "view_item": "View Post",
+            "view_items": "View Posts",
+            "search_items": "Search Posts",
+            "not_found": "No posts found.",
+            "not_found_in_trash": "No posts found in Trash.",
+            "parent_item_colon": null,
+            "all_items": "Font Faces",
+            "archives": "Font Faces",
+            "attributes": "Post Attributes",
+            "insert_into_item": "Insert into post",
+            "uploaded_to_this_item": "Uploaded to this post",
+            "featured_image": "Featured image",
+            "set_featured_image": "Set featured image",
+            "remove_featured_image": "Remove featured image",
+            "use_featured_image": "Use as featured image",
+            "filter_items_list": "Filter posts list",
+            "filter_by_date": "Filter by date",
+            "items_list_navigation": "Posts list navigation",
+            "items_list": "Posts list",
+            "item_published": "Post published.",
+            "item_published_privately": "Post published privately.",
+            "item_reverted_to_draft": "Post reverted to draft.",
+            "item_trashed": "Post trashed.",
+            "item_scheduled": "Post scheduled.",
+            "item_updated": "Post updated.",
+            "item_link": "Post Link",
+            "item_link_description": "A link to a post.",
+            "menu_name": "Font Faces",
+            "name_admin_bar": "Font Face"
+        },
+        "name": "Font Faces",
+        "slug": "wp_font_face",
+        "icon": null,
+        "supports": {
+            "title": true,
+            "editor": true
+        },
+        "taxonomies": [],
+        "rest_base": "font-families\/(?P<font_family_id>[\\d]+)\/font-faces",
+        "rest_namespace": "wp\/v2",
+        "yoast_head": null,
+        "yoast_head_json": null,
+        "_links": {
+            "collection": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/types"
+                }
+            ],
+            "wp:items": [
+                {
+                    "href": "https:\/\/wp.smokenetwork.nl\/wp-json\/wp\/v2\/font-families\/(?P<font_family_id>[\\d]+)\/font-faces"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
 }
 
 export const user = {
